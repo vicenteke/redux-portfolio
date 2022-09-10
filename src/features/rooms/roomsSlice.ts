@@ -17,7 +17,7 @@ export const roomsSlice = createSlice({
     name: 'rooms',
     initialState,
     reducers: {
-        reset: (state) => {
+        resetRooms: (state) => {
             state.active = initialState.active
             state.statuses = initialState.statuses
         },
@@ -66,7 +66,7 @@ export const roomsSlice = createSlice({
     }
 });
 
-export const { reset, moveRight, moveLeft, moveUp, moveDown, setActiveRoomAsVisited, setRoomAsVisited } = roomsSlice.actions;
+export const { resetRooms, moveRight, moveLeft, moveUp, moveDown, setActiveRoomAsVisited, setRoomAsVisited } = roomsSlice.actions;
 
 export const selectActiveRoom = (state: RootState) => state.rooms.active;
 export const selectRoomStatuses = (state: RootState) => state.rooms.statuses;

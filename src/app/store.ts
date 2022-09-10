@@ -2,6 +2,7 @@ import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/t
 import { persistStore, persistReducer } from 'redux-persist'
 import thunk from 'redux-thunk'
 import storage from 'redux-persist/lib/storage'
+import coinsReducer from '../features/coins/coinsSlice';
 import roomsReducer from '../features/rooms/roomsSlice';
 
 const persistConfig = {
@@ -10,7 +11,7 @@ const persistConfig = {
 }
 
 const reducers = combineReducers({
-    // counter: counterReducer,
+    coins: coinsReducer,
     rooms: roomsReducer
 })
 

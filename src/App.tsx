@@ -1,12 +1,26 @@
 import React from 'react';
-// import logo from './logo.svg';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from 'react-router-dom';
+
+import { Coins } from './features/coins/Coins';
 import { Rooms } from './features/rooms/Rooms';
-// import { Counter } from './features/counter/Counter';
-import './App.css';
+import Page from './pages/Page';
 
 function App() {
     return (
-        <Rooms />
+        <Router>
+            <Link to="/">Home</Link>
+            <Link to="/page">Page</Link>
+            <Coins />
+            <Routes>
+                <Route path="/" element={<Rooms />} />
+                <Route path="/page" element={<Page />} />
+            </Routes>
+        </Router>
     );
 }
 
