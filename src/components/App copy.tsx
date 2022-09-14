@@ -6,9 +6,9 @@ import {
     Link
 } from 'react-router-dom';
 
-import { Coins } from './features/coins/Coins';
-import { Rooms } from './features/rooms/Rooms';
-import Page from './pages/Page';
+import { Coins } from '../features/coins/Coins';
+import { Rooms } from '../features/rooms/Rooms';
+import Page from '../pages/Page';
 
 function App() {
     return (

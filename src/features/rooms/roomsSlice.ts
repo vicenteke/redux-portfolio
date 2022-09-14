@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 
-type RoomPossibleStates = 'notSeen' | 'seen' | 'visited'
+export type RoomPossibleStates = 'notSeen' | 'seen' | 'visited'
 
 export interface RoomsState {
     active: number;
@@ -57,16 +57,35 @@ export const roomsSlice = createSlice({
                 state.statuses[state.active] = 'seen'
             }
         },
+        setActive: (state, action: PayloadAction<number>) => {
+            state.active = action.payload
+            if (state.statuses[action.payload] === 'notSeen') {
+                state.statuses[action.payload] = 'seen'
+            }
+        },
         setRoomAsVisited: (state, action: PayloadAction<number>) => {
             state.statuses[action.payload] = 'visited'
         },
         setActiveRoomAsVisited: (state) => {
             state.statuses[state.active] = 'visited'
+        },
+        setRoomAsSeen: (state, action: PayloadAction<number>) => {
+            state.statuses[action.payload] = 'seen'
         }
     }
 });
 
-export const { resetRooms, moveRight, moveLeft, moveUp, moveDown, setActiveRoomAsVisited, setRoomAsVisited } = roomsSlice.actions;
+export const {
+    resetRooms,
+    moveRight,
+    moveLeft,
+    moveUp,
+    moveDown,
+    setActiveRoomAsVisited,
+    setRoomAsVisited,
+    setRoomAsSeen,
+    setActive
+} = roomsSlice.actions;
 
 export const selectActiveRoom = (state: RootState) => state.rooms.active;
 export const selectRoomStatuses = (state: RootState) => state.rooms.statuses;
