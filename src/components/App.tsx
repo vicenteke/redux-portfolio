@@ -1,11 +1,12 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
     Routes,
     Route,
-    Link
+    Link,
+    useNavigate
 } from 'react-router-dom';
 
+import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -33,15 +34,25 @@ import { Coins } from '../features/coins/Coins';
 import { Rooms } from '../features/rooms/Rooms';
 import Page from '../pages/Page';
 
-function App() {
-    const pages = ['Products', 'Pricing', 'Blog'];
-    const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+// Offset to go under AppBarr
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
+function App() {
+    // Constants and setup
+    const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+    const pages: object = {
+        'Home': '/',
+        'Page': '/page'
+    }
+    const linkClassName = 'menu-link'
     const drawerWidth = 240
 
+    // Hooks
     const [navOpen, setNavOpen] = React.useState<boolean>(false);
     const [anchorElSettings, setAnchorElSettings] = React.useState<HTMLElement | null>(null);
+    const navigate = useNavigate()
 
+    // Methods
     const toggleNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setNavOpen(!navOpen);
     };
@@ -56,8 +67,14 @@ function App() {
         setAnchorElSettings(null);
     };
 
+    const navigateAndCloseDrawer = (route: string) => {
+        setNavOpen(false)
+        navigate(route)
+    }
+
+    // App
     return (<>
-        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -73,18 +90,19 @@ function App() {
                         </IconButton>
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
-                        <Button
-                            key={page}
-                            onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            {page}
-                        </Button>
-                        ))}
+                        {Object.keys(pages).map((page) => {
+                            return (<Button
+                                key={page}
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                <Link to={pages[page as keyof typeof pages]} className={linkClassName}>{page}</Link>
+                            </Button>)
+                        })}
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
+                        <Coins />
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenSettingsMenu} sx={{ p: 0 }}>
                                 <Settings />
@@ -127,16 +145,19 @@ function App() {
             <Toolbar />
             <Box sx={{ overflow: 'auto' }}>
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
+                    
+                    {Object.keys(pages).map((page) => {
+                        return (<ListItem key={`${page}-drawer`} disablePadding>
+                        {/* <ListItemButton>
+                            <NavLink to={pages[page as keyof typeof pages]}>
+                            <ListItemText primary={page} />
+                            </NavLink>
+                        </ListItemButton> */}
+                        <ListItemButton onClick={() => navigateAndCloseDrawer(pages[page as keyof typeof pages])}>
+                        <ListItemText primary={page} />
                         </ListItemButton>
-                    </ListItem>
-                    ))}
+                        </ListItem>)})
+                    }
                 </List>
                 <Divider />
                 <List>
@@ -153,19 +174,14 @@ function App() {
                 </List>
             </Box>
         </Drawer>}
-    </>);
-
-    return (
-        <Router>
-            <Link to="/">Home</Link>
-            <Link to="/page">Page</Link>
-            <Coins />
+            <Offset sx={{ mb: '16px' }}/>
+            {/* <Link to="/">Home</Link>
+            <Link to="/page">Page</Link> */}
             <Routes>
                 <Route path="/" element={<Rooms />} />
                 <Route path="/page" element={<Page />} />
             </Routes>
-        </Router>
-    );
+    </>);
 }
 
 export default App;

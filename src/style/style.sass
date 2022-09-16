@@ -5,9 +5,6 @@ body
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
 
-a
-    margin-right: 20px
-
 .avatar
     @media (max-width: 900px)
         position: fixed
@@ -15,19 +12,29 @@ a
         left: 0
         width: 100vw
         z-index: 100
-        max-height: 30vh
+        // max-height: 30vh
+        height: 30vh
+        background: linear-gradient(0deg, white 0%, rgba(255, 255, 255, .8) 50%, transparent 100%)
 
 .home-content-body
     margin: auto
     @media (min-width: 1350px)
         max-width: 1350px
-    
+
+.skeleton-room
+    height: 28vh !important
+
 .room-btn
-    height: 30vh
+    @extend .skeleton-room
     overflow: hidden
     border-radius: 16px
 
 .room-btn-active
     border: 2px solid $warning-light-color
     margin: -2px
+
+.menu-link
+    color: white
+    text-decoration: none
+    font-weight: bold
     

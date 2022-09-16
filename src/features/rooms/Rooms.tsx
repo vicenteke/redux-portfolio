@@ -33,10 +33,14 @@ export function Rooms() {
     const isClickable = (index: number, state: RoomPossibleStates) => {
         // A room is clickable if it's next to the active room
         if (state !== 'notSeen') return true
-        if (activeRoom < 6 && activeRoom === index - 3) return true
-        if (activeRoom > 2 && activeRoom === index + 3) return true
-        if (activeRoom % 3 !== 0 && activeRoom === index + 1) return true
-        if (activeRoom % 3 !== 2 && activeRoom === index - 1) return true
+        if (window.innerWidth > 900) {
+            if (activeRoom < 6 && activeRoom === index - 3) return true
+            if (activeRoom > 2 && activeRoom === index + 3) return true
+            if (activeRoom % 3 !== 0 && activeRoom === index + 1) return true
+            if (activeRoom % 3 !== 2 && activeRoom === index - 1) return true
+        } else {
+            if (activeRoom === index - 1 || activeRoom === index + 1) return true 
+        }
         return false
     }
     

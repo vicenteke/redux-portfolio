@@ -80,7 +80,7 @@ export function Room({ active, state, page, clickable, roomNumber }: RoomProps) 
     if (loadingState === 'loading') {
         return (
             <>
-                <Skeleton variant="rounded" animation="wave" height={270}/>
+                <Skeleton variant="rounded" animation="wave" className='skeleton-room'/>
             </>
         )
     }
