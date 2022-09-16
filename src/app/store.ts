@@ -4,6 +4,7 @@ import thunk from 'redux-thunk'
 import storage from 'redux-persist/lib/storage'
 import coinsReducer from '../features/coins/coinsSlice';
 import roomsReducer from '../features/rooms/roomsSlice';
+import avatarReducer from '../features/avatar/avatarSlice';
 
 const persistConfig = {
     key: 'root',
@@ -12,7 +13,8 @@ const persistConfig = {
 
 const reducers = combineReducers({
     coins: coinsReducer,
-    rooms: roomsReducer
+    rooms: roomsReducer,
+    avatar: avatarReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, reducers)

@@ -1,13 +1,10 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
 
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
-    resetRooms,
     moveDown,
     moveLeft,
     moveRight,
@@ -17,18 +14,18 @@ import {
     selectRoomStatuses,
     RoomPossibleStates
 } from './roomsSlice';
-import { incrementSeen, incrementVisited, resetCoins } from '../coins/coinsSlice'
+import { incrementSeen, incrementVisited } from '../coins/coinsSlice'
 
 import { Room } from './Room';
 
 
 export function Rooms() {
+    const pages = ['page', 'page', 'page', 'page', 'page', 'page', 'page', 'page', 'page']
+
     const activeRoom = useAppSelector(selectActiveRoom);
     const roomStatuses = useAppSelector(selectRoomStatuses);
     const dispatch = useAppDispatch();
     let navigate = useNavigate();
-
-    const pages = ['page', 'page', 'page', 'page', 'page', 'page', 'page', 'page', 'page']
 
     const isClickable = (index: number, state: RoomPossibleStates) => {
         // A room is clickable if it's next to the active room
@@ -83,29 +80,16 @@ export function Rooms() {
     }, [])
 
     return (
-        <Box className="home-content-body">
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={9}>
-                    <Grid container spacing={1}>
-                        {roomStatuses.map((r, i) => 
-                            <Grid key={`Room_${i}`} item xs={12} md={4}>
-                                <Room state={r}
-                                      page={pages[i]}
-                                      active={activeRoom === i}
-                                      clickable={isClickable(i, r)}
-                                      roomNumber={i}/>
-                            </Grid>
-                        )}
-                    </Grid>
+        <Grid container spacing={1}>
+            {roomStatuses.map((r, i) => 
+                <Grid key={`Room_${i}`} item xs={12} md={4}>
+                    <Room state={r}
+                            page={pages[i]}
+                            active={activeRoom === i}
+                            clickable={isClickable(i, r)}
+                            roomNumber={i}/>
                 </Grid>
-                <Grid item xs={12} md={3} className="avatar">
-                    "Avatar with hints"<br/>
-                    <Button variant="outlined" onClick={() => {
-                        dispatch(resetRooms())
-                        dispatch(resetCoins())
-                    }}>reset</Button>
-                </Grid>
-            </Grid>
-        </Box>
+            )}
+        </Grid>
     );
 }

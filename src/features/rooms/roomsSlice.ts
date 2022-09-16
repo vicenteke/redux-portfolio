@@ -9,8 +9,8 @@ export interface RoomsState {
 }
 
 const initialState: RoomsState = {
-    active: 6,    // Start on bottom left
-    statuses: ['notSeen', 'notSeen', 'notSeen', 'notSeen', 'notSeen', 'notSeen', 'seen', 'notSeen', 'notSeen']
+    active: 0,    // Start on top left
+    statuses: ['seen', 'notSeen', 'notSeen', 'notSeen', 'notSeen', 'notSeen', 'notSeen', 'notSeen', 'notSeen']
 };
 
 export const roomsSlice = createSlice({

@@ -31,7 +31,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import Settings from '@mui/icons-material/Settings';
 
 import { Coins } from '../features/coins/Coins';
-import { Rooms } from '../features/rooms/Rooms';
+import Home from '../pages/Home';
 import Page from '../pages/Page';
 
 // Offset to go under AppBarr
@@ -175,12 +175,12 @@ function App() {
             </Box>
         </Drawer>}
             <Offset sx={{ mb: '16px' }}/>
-            {/* <Link to="/">Home</Link>
-            <Link to="/page">Page</Link> */}
-            <Routes>
-                <Route path="/" element={<Rooms />} />
-                <Route path="/page" element={<Page />} />
-            </Routes>
+            <Box sx={{ flexGrow: 1 }} className='content-box'>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/page" element={<Page />} />
+                </Routes>
+            </Box>
     </>);
 }
 

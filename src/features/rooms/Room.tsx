@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import Skeleton from '@mui/material/Skeleton';
@@ -9,7 +10,9 @@ import {
     setActive
 } from './roomsSlice';
 import { incrementSeen, incrementVisited } from './../coins/coinsSlice'
-import { useDispatch } from 'react-redux';
+
+import LoadingPossibleStates from '../../constants/LoadingPossibleStates'
+
 
 export interface RoomProps {
     active: boolean,
@@ -18,8 +21,6 @@ export interface RoomProps {
     clickable: boolean,
     roomNumber: number
 }
-
-type LoadingPossibleStates = 'loading' | 'ready' | 'error'
 
 export function Room({ active, state, page, clickable, roomNumber }: RoomProps) {
     const [loadingState, setLoadingState] = useState<LoadingPossibleStates>('loading')
