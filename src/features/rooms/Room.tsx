@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../../app/hooks'
 
 import Skeleton from '@mui/material/Skeleton';
 
@@ -32,7 +32,7 @@ export function Room({ active, state, page, clickable, roomNumber }: RoomProps) 
         'visited': '_visited.svg',
     }
 
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     const navigate = useNavigate()
 
     const handleRoomClick = (event: React.MouseEvent<HTMLElement>) => {

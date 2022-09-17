@@ -14,10 +14,6 @@ export default function Home() {
         </Grid>
         <Grid item xs={12} md={3}>
             <Avatar />
-            {/* <Button variant="outlined" onClick={() => {
-                dispatch(resetRooms())
-                dispatch(resetCoins())
-            }}>reset</Button> */}
         </Grid>
     </Grid>
     );

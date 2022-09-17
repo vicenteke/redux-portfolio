@@ -1,18 +1,23 @@
 import React from 'react';
 
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import Button from '@mui/material/Button'
+import MonetizationOnRoundedIcon from '@mui/icons-material/MonetizationOnRounded';
+
+import { useAppSelector } from '../../app/hooks';
 import {
-    resetCoins,
     selectCoins
 } from './coinsSlice';
 
 export function Coins() {
     const coins = useAppSelector(selectCoins);
-    const dispatch = useAppDispatch();
 
     return (
-        <button onClick={() => dispatch(resetCoins())}>
-            Coins: {coins}
-        </button>
+        <Button
+            color="warning"
+            variant="contained"
+            startIcon={<MonetizationOnRoundedIcon />}
+        >
+            {coins}
+        </Button>
     );
 }
