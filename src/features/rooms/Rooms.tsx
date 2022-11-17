@@ -20,7 +20,9 @@ import { Room } from './Room';
 
 
 export function Rooms() {
-    const pages = ['page', 'page', 'page', 'page', 'page', 'page', 'page', 'page', 'page']
+    const pages = ['reception', 'meeting_room', 'bathroom',
+                   'office', 'store', 'contact',
+                   'coffee', 'lab', 'library']
 
     const activeRoom = useAppSelector(selectActiveRoom);
     const roomStatuses = useAppSelector(selectRoomStatuses);
@@ -36,7 +38,8 @@ export function Rooms() {
             if (activeRoom % 3 !== 0 && activeRoom === index + 1) return true
             if (activeRoom % 3 !== 2 && activeRoom === index - 1) return true
         } else {
-            if (activeRoom === index - 1 || activeRoom === index + 1) return true 
+            if (roomStatuses[index - 1] !== 'notSeen' || roomStatuses[index + 1] !== 'notSeen') return true 
+            // if (activeRoom === index - 1 || activeRoom === index + 1) return true
         }
         return false
     }
@@ -65,7 +68,9 @@ export function Rooms() {
                 case 'Enter':
                     dispatch(setActiveRoomAsVisited())
                     dispatch(incrementVisited())
-                    navigate(`/${pages[activeRoom]}`)
+                    // TODO: create proper individual pages
+                    // navigate(`/${pages[activeRoom]}`)
+                    navigate('/page')
                     break
                 default: break
             }

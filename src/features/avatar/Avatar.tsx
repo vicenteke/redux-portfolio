@@ -13,8 +13,8 @@ import { TalkBox } from './TalkBox';
 
 
 export function Avatar() {
-    const avatarImages = ['avatar_1.png', 'avatar_2.jpeg']
-    const imgBasePath = '/resources/img/'
+    const avatarImages = ['avatar_1.png', 'avatar_2.png', 'avatar_8.png', 'avatar_7.png']
+    const imgBasePath = '/resources/img/avatars/'
 
     const avatar = useAppSelector(selectAvatar);
     const room = useAppSelector(selectActiveRoom);
@@ -25,7 +25,9 @@ export function Avatar() {
         const loadImage = (path: string) => {
             const img = new Image();
             img.onload = () => {
-                setTimeout(() => setLoadingState('ready'), 1000)
+                // TODO: fix loading states
+                // setTimeout(() => setLoadingState('ready'), 1000)
+                setLoadingState('ready')
             };
             img.onerror = () => {
                 setLoadingState('error')

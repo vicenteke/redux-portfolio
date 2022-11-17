@@ -25,7 +25,7 @@ export interface RoomProps {
 export function Room({ active, state, page, clickable, roomNumber }: RoomProps) {
     const [loadingState, setLoadingState] = useState<LoadingPossibleStates>('loading')
     const roomId = `room-${roomNumber}`
-    const imgBasePath = '/resources/img/'
+    const imgBasePath = '/resources/img/rooms/'
     const imgSuffixes = {
         'notSeen': 'not_seen.svg',
         'seen': '_seen.svg',
@@ -46,7 +46,9 @@ export function Room({ active, state, page, clickable, roomNumber }: RoomProps) 
                 } else if (active) {
                     dispatch(setRoomAsVisited(roomNumber))
                     dispatch(incrementVisited())
-                    navigate(`/${page}`)
+                    // TODO: create proper individual pages
+                    // navigate(`/${page}`)
+                    navigate('/page')
                 }
             }
         }
@@ -90,9 +92,9 @@ export function Room({ active, state, page, clickable, roomNumber }: RoomProps) 
 
     // Render actual component
     if (state === 'notSeen') {
-        image = <img src={`${imgBasePath}not_seen.svg`} alt="unknown room slot" />
+        image = <img className="room-img" src={`${imgBasePath}not_seen.svg`} alt="unknown room slot" />
     } else {
-        image = <img src={imgBasePath + page + imgSuffixes[state]} alt={`${page} room slot`} />
+        image = <img className="room-img" src={imgBasePath + page + imgSuffixes[state]} alt={`${page} room slot`} />
     }
 
     return (
