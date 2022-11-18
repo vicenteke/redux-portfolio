@@ -10,7 +10,7 @@ export interface AvatarState {
 
 const initialState: AvatarState = {
     active: 0,
-    statuses: ['unlocked', 'locked']
+    statuses: ['unlocked', 'locked', 'locked', 'locked']
 };
 
 export const avatarSlice = createSlice({

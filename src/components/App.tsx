@@ -30,14 +30,10 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Settings from '@mui/icons-material/Settings';
 
-import { useAppDispatch } from '../app/hooks'
-
 import { Coins } from '../features/coins/Coins';
 import Home from '../pages/Home';
 import Page from '../pages/Page';
-
-import { resetRooms } from '../features/rooms/roomsSlice';
-import { resetCoins } from '../features/coins/coinsSlice';
+import ResetButton from './ResetButton';
 
 // Offset to go under AppBarr
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
@@ -56,7 +52,6 @@ function App() {
     const [navOpen, setNavOpen] = React.useState<boolean>(false);
     const [anchorElSettings, setAnchorElSettings] = React.useState<HTMLElement | null>(null);
     const navigate = useNavigate()
-    const dispatch = useAppDispatch()
 
     // Methods
     const toggleNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -80,7 +75,7 @@ function App() {
 
     // App
     return (<>
-        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1}}>
+        <AppBar position="fixed" className="nice-gradient" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -109,10 +104,7 @@ function App() {
 
                     <Box sx={{ flexGrow: 0 }}>
                         <Coins />
-                        <Button variant="contained" color="error" onClick={() => {
-                            dispatch(resetRooms())
-                            dispatch(resetCoins())
-                        }}>reset</Button>
+                        <ResetButton />
                         {/* <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenSettingsMenu} sx={{ p: 0 }}>
                                 <Settings />

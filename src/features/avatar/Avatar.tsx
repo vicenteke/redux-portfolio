@@ -64,6 +64,7 @@ export function Avatar() {
             spacing={1}
             onClick={toggleText}
             className='avatar-box'
+            sx={{ cursor: 'pointer' }}
             >
                 <TalkBox room={room} active={showText} />
                 <Box className='avatar-image' alignSelf='end'>

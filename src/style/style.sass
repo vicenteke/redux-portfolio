@@ -1,14 +1,11 @@
 $warning-light-color: #ff9800
 
-
-// TODO:
-// when on mobile, user cannot click on the last room
-// when on mobile, white gradient is not ok
-
 body
     margin: 0
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
+    @media (max-width: 900px)
+        padding-bottom: calc(30vh - 24px)
 
 .content-box
     margin: auto
@@ -29,10 +26,10 @@ body
     @extend .skeleton-room
     overflow: hidden
     border-radius: 16px
+    border: 1px solid #ccc
 
 .room-btn-active
-    border: 2px solid $warning-light-color
-    margin: -2px
+    border: 1px solid $warning-light-color
 
 .room-img
     display: block
@@ -53,7 +50,7 @@ body
         z-index: 100
         max-height: 30vh
         // height: 30vh
-        background: linear-gradient(0deg, white 0%, rgba(255, 255, 255, .8) 50%, transparent 100%)
+        background: linear-gradient(0deg, white 50%, rgba(255, 255, 255, .8) 85%, transparent 100%)
 
 .avatar-image
     overflow-x: hidden
@@ -70,11 +67,23 @@ body
         width: 90%
 
 .talkbox
-    border-radius: 16px
-    border: 3px solid transparent
+    border-radius: 16px 16px 0
+    border: 2px solid transparent
     height: 100%
     padding: 16px
+    overflow-y: auto
+    @media (max-width: 900px)
+        border-radius: 16px 16px 16px 0
 
 .talkbox-active
-    border: 3px solid black
+    border: 2px solid #3f3f3f
+    box-shadow: 5px 5px 15px #969696
+
+.nice-gradient
+    // background: linear-gradient(85deg, ${theme.palette.info.main} 5%, #4059AD 35%)
+    // background: linear-gradient(85deg, #7F53AC 30%, #647DEE 90%)
+    // background: linear-gradient(85deg, #63A4FF 15%, #83EAF1 40%)
+    // background: linear-gradient(20deg, #009FFD 20%, #00c6fd 80%)
+    // background: linear-gradient(-30deg, #1391ff 20%, #00c6fd 90%)
+    background: linear-gradient(-30deg, #0288d1 20%, #00c6fd 90%)
     

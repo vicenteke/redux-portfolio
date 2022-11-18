@@ -1,14 +1,15 @@
 import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist'
 import thunk from 'redux-thunk'
-import storage from 'redux-persist/lib/storage'
+import storage from 'redux-persist/lib/storage' // Like cookie storage
+import storageSession from 'redux-persist/lib/storage/session'
 import coinsReducer from '../features/coins/coinsSlice';
 import roomsReducer from '../features/rooms/roomsSlice';
 import avatarReducer from '../features/avatar/avatarSlice';
 
 const persistConfig = {
     key: 'root',
-    storage,
+    storage: storageSession,
 }
 
 const reducers = combineReducers({

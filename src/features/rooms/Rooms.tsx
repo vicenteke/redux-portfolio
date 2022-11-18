@@ -38,7 +38,8 @@ export function Rooms() {
             if (activeRoom % 3 !== 0 && activeRoom === index + 1) return true
             if (activeRoom % 3 !== 2 && activeRoom === index - 1) return true
         } else {
-            if (roomStatuses[index - 1] !== 'notSeen' || roomStatuses[index + 1] !== 'notSeen') return true 
+            if ((roomStatuses[index - 1] !== 'notSeen' && index > 0) ||
+                (roomStatuses[index + 1] !== 'notSeen' && index < 8)) return true
             // if (activeRoom === index - 1 || activeRoom === index + 1) return true
         }
         return false
@@ -66,6 +67,7 @@ export function Rooms() {
                     dispatch(incrementSeen())
                     break
                 case 'Enter':
+                    event.preventDefault()
                     dispatch(setActiveRoomAsVisited())
                     dispatch(incrementVisited())
                     // TODO: create proper individual pages
@@ -85,7 +87,7 @@ export function Rooms() {
     }, [])
 
     return (
-        <Grid container spacing={1}>
+        <Grid container spacing={2}>
             {roomStatuses.map((r, i) => 
                 <Grid key={`Room_${i}`} item xs={12} md={4}>
                     <Room state={r}

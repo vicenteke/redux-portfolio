@@ -16,6 +16,7 @@ export function Coins() {
             color="warning"
             variant="contained"
             startIcon={<MonetizationOnRoundedIcon />}
+            sx={{ cursor: 'default' }}
         >
             {coins}
         </Button>
