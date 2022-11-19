@@ -11,13 +11,9 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
 
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -28,12 +24,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import Settings from '@mui/icons-material/Settings';
 
 import { Coins } from '../features/coins/Coins';
 import Home from '../pages/Home';
 import Page from '../pages/Page';
 import ReceptionPage from '../pages/Reception';
+import MeetingRoomPage from '../pages/MeetingRoom';
 import ResetButton from './ResetButton';
 
 // Offset to go under AppBarr
@@ -204,6 +200,9 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/page" element={<Page />} />
                     <Route path="/reception" element={<ReceptionPage />} />
+                    <Route path="/meeting_room" element={<MeetingRoomPage />} />
+                    <Route path="/bathroom" element={<Home />} />
+                    <Route path="/lab" element={<Home />} />
                 </Routes>
             </Box>
     </>);
