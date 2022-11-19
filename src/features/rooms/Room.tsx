@@ -46,9 +46,7 @@ export function Room({ active, state, page, clickable, roomNumber }: RoomProps) 
                 } else if (active) {
                     dispatch(setRoomAsVisited(roomNumber))
                     dispatch(incrementVisited())
-                    // TODO: create proper individual pages
-                    // navigate(`/${page}`)
-                    navigate('/page')
+                    navigate(`/${page}`)
                 }
             }
         }

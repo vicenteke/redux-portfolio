@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
     Routes,
     Route,
@@ -33,7 +33,6 @@ import Settings from '@mui/icons-material/Settings';
 import { Coins } from '../features/coins/Coins';
 import Home from '../pages/Home';
 import Page from '../pages/Page';
-import ReceptionPage from '../pages/Reception';
 import ResetButton from './ResetButton';
 
 // Offset to go under AppBarr
@@ -44,7 +43,7 @@ function App() {
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
     const pages: object = {
         'Home': '/',
-        'Help': '/reception'
+        'Page': '/page'
     }
     const linkClassName = 'menu-link'
     const drawerWidth = 240
@@ -73,27 +72,6 @@ function App() {
         setNavOpen(false)
         navigate(route)
     }
-
-    // Add "Esc" on click handling
-    useEffect(() => {
-        // Anything in here is fired on component mount.
-        const handleKeyDown = (event: KeyboardEvent) => {
-            const keyName = event.key
-            switch (keyName) { 
-                case 'Escape':
-                    navigate('/')
-                    break
-                default: break
-            }
-        }
-
-        document.addEventListener('keydown', handleKeyDown);
-
-        return () => {
-            // Anything in here is fired on component unmount.
-            document.removeEventListener('keydown', handleKeyDown);
-        }
-    }, [])
 
     // App
     return (<>
@@ -203,7 +181,6 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/page" element={<Page />} />
-                    <Route path="/reception" element={<ReceptionPage />} />
                 </Routes>
             </Box>
     </>);

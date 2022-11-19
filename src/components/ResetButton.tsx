@@ -42,7 +42,7 @@ export default function ResetButton() {
             aria-describedby="alert-dialog-description"
         >
             <DialogTitle id="alert-dialog-title">
-            {"Use Google's location service?"}
+            {"Reset your progress?"}
             </DialogTitle>
             <DialogContent>
             <DialogContentText id="alert-dialog-description">

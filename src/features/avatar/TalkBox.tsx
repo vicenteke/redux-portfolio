@@ -10,7 +10,7 @@ export interface TalkBoxProps {
 const receptionText = <>
     <strong className="text-center">Reception</strong><br/><br/>
     Welcome to my portfolio! Use the mouse or the arrows to navigate and press enter to check a room.<br/>
-    Here you will find some help and understand what's going on.
+    Here at the reception you will find some help and understand what's going on.
 </>
 
 const meetingRoomText = <>

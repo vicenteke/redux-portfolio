@@ -1,11 +1,37 @@
 $warning-light-color: #ff9800
 
+// Scrollbar
+$scroll-foreground-color: linear-gradient(-30deg, #0288d1 20%, #00c6fd 90%)
+$scroll-background-color: transparent
+$scroll-size: 8px
+
+::-webkit-scrollbar
+    width:  $scroll-size
+
+::-webkit-scrollbar-thumb
+    background: $scroll-foreground-color
+    border-radius: 16px
+
+::-webkit-scrollbar-track
+    background: $scroll-background-color
+    position: fixed
+    right: 0
+    height: 100vh
+    top: 0
+    z-index: 100
+    margin-left: -$scroll-size
+// End Scrollbar
+
 body
     margin: 0
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     @media (max-width: 900px)
         padding-bottom: calc(30vh - 24px)
+
+    // For Internet Explorer
+    scrollbar-face-color: $scroll-foreground-color
+    scrollbar-track-color: $scroll-background-color
 
 .content-box
     margin: auto
