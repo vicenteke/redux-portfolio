@@ -1,4 +1,5 @@
 import React from 'react';
+import Typography from '@mui/material/Typography';
 import ReturnButton from '../components/ReturnButton'
 import WorkTimeline from '../components/WorkTimeline';
 
@@ -6,15 +7,14 @@ export default function MeetingRoomPage() {
     return (
         <>
             <ReturnButton />
-            <h1>Meeting Room</h1>
+            <br/><br/><Typography variant="h1" component="p">Meeting Room</Typography><br/>
 
-            <p>
+            <Typography variant="body1" component="p">
             Here's a a list of my work experiences and a description of what I used to do during each of them.
-            </p>
+            </Typography><br/>
             <br/>
             <WorkTimeline />
             <br/>
-            <ReturnButton />
         </>
     );
 }

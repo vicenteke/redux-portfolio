@@ -30,6 +30,7 @@ import Home from '../pages/Home';
 import Page from '../pages/Page';
 import ReceptionPage from '../pages/Reception';
 import MeetingRoomPage from '../pages/MeetingRoom';
+import LibraryPage from '../pages/Library';
 import ResetButton from './ResetButton';
 
 // Offset to go under AppBarr
@@ -203,6 +204,7 @@ function App() {
                     <Route path="/meeting_room" element={<MeetingRoomPage />} />
                     <Route path="/bathroom" element={<Home />} />
                     <Route path="/lab" element={<Home />} />
+                    <Route path="/library" element={<LibraryPage />} />
                 </Routes>
             </Box>
     </>);
