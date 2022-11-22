@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 export interface TalkBoxProps {
     room: number,
@@ -27,7 +28,6 @@ const bathroomText = <>
 
 const officeText = <>
     <strong className="text-center">Office</strong><br/><br/>
-    TODO<br/>
     I brought you some of the projects I've made apart from work. That's how software people have fun most of their nights.
 </>
 
@@ -78,7 +78,7 @@ export function TalkBox({ room, active }: TalkBoxProps) {
     return (
         <Box className='talkbox-box'>
             <Box className={active ? 'talkbox talkbox-active' : 'talkbox'}>
-                {active ? roomTexts[room]: ''}
+                <Typography variant="body2" component="p">{active ? roomTexts[room]: ''}</Typography>
             </Box>
         </Box>
     );

@@ -7,9 +7,9 @@ export default function LibraryPage() {
     return (
         <>
             <ReturnButton />
-            <br/><br/><Typography variant="h1" component="p">Library</Typography><br/>
+            <br/><br/><Typography variant="h1" component="h1">Library</Typography><br/>
             <Typography variant="body1" component="p">
-            Surprisingly enough, I have a <strong>Bachelor's degree in Mechatronics Engineering</strong> from Universidade Federal de Santa Catarina (UFSC), with Academic Honors. UFSC is among the best LATAM universities, if you're a curious person you can learn more at <Link href="" target="_blank" rel="noreferrer" underline="hover">{'https://en.ufsc.br/'}</Link>.
+            Surprisingly enough, I have a <strong>Bachelor's degree in Mechatronics Engineering</strong> from Universidade Federal de Santa Catarina (UFSC), with Academic Honors. UFSC is among the best LATAM universities, if you're a curious person you can learn more at <Link href="https://en.ufsc.br/" target="_blank" rel="noreferrer" underline="hover">{'https://en.ufsc.br/'}</Link>.
             </Typography><br/>
             <Typography variant="body1" component="p">
             Usually, no one knows what mechatronics is about, so let me briefly explain it. It is something like mechanics + electronics + computing. The main focus for us was on <strong>embedded systems</strong>, which include <strong>microcontrollers, real-time operating systems,</strong> some <strong>electronics</strong> and not so much <strong>mechanics</strong>.

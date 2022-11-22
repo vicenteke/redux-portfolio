@@ -4,6 +4,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Link from '@mui/material/Link';
+
 
 export default function FAQ() {
     const data = [
@@ -29,7 +31,7 @@ export default function FAQ() {
         },
         {
             title: "Who made this?",
-            content: <>My name is Vicente Knihs Erbs. I'm a (full-stack) software developer and this is the portfolio I've made. You can find me on <a href="https://www.linkedin.com/in/vicente-knihs-erbs-335b95209/">LinkedIn</a>, my email is vicenteknihs@gmail.com or call me +55 (47) 99627-9577 (Brazil). Let's chat!</>
+            content: <>My name is Vicente Knihs Erbs. I'm a (full-stack) software developer and this is the portfolio I've made. You can find me on <Link href="https://www.linkedin.com/in/vicente-knihs-erbs-335b95209/" target="_blank" rel="noreferrer" underline="hover">{'LinkedIn'}</Link>, my email is <Link href="mailto:vicenteknihs@gmail.com" target="_blank" rel="noreferrer" underline="hover">{'vicenteknihs@gmail.com'}</Link> or call me +55 (47) 99627-9577 (Brazil). Let's chat!</>
         }
     ]
 

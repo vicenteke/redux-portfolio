@@ -70,9 +70,7 @@ export function Rooms() {
                     event.preventDefault()
                     dispatch(setActiveRoomAsVisited())
                     dispatch(incrementVisited())
-                    // TODO: create proper individual pages
-                    // navigate(`/${pages[activeRoom]}`)
-                    navigate('/page')
+                    navigate(`/${pages[activeRoom]}`)
                     break
                 default: break
             }

@@ -26,12 +26,14 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
 import { Coins } from '../features/coins/Coins';
+import ResetButton from './ResetButton';
 import Home from '../pages/Home';
 import Page from '../pages/Page';
 import ReceptionPage from '../pages/Reception';
 import MeetingRoomPage from '../pages/MeetingRoom';
 import LibraryPage from '../pages/Library';
-import ResetButton from './ResetButton';
+import CoffeePage from '../pages/Coffee';
+import OfficePage from '../pages/Office';
 
 // Offset to go under AppBarr
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
@@ -205,6 +207,10 @@ function App() {
                     <Route path="/bathroom" element={<Home />} />
                     <Route path="/lab" element={<Home />} />
                     <Route path="/library" element={<LibraryPage />} />
+                    <Route path="/coffee" element={<CoffeePage />} />
+                    <Route path="/office" element={<OfficePage />} />
+                    <Route path="/store" element={<Page />} />
+                    <Route path="/contact" element={<Page />} />
                 </Routes>
             </Box>
     </>);
