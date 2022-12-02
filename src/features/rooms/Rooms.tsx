@@ -82,7 +82,7 @@ export function Rooms() {
             // Anything in here is fired on component unmount.
             document.removeEventListener('keydown', handleKeyDown);
         }
-    }, [])
+    }, [activeRoom])
 
     return (
         <Grid container spacing={2}>

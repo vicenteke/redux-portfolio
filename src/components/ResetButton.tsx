@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -10,9 +12,11 @@ import { useAppDispatch } from '../app/hooks'
 
 import { resetRooms } from '../features/rooms/roomsSlice';
 import { resetCoins } from '../features/coins/coinsSlice';
+import { resetAvatar } from '../features/avatar/avatarSlice'
 
 export default function ResetButton() {
     const dispatch = useAppDispatch()
+    const navigate = useNavigate()
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
@@ -26,7 +30,9 @@ export default function ResetButton() {
     const handleReset = () => {
         dispatch(resetRooms())
         dispatch(resetCoins())
+        dispatch(resetAvatar())
         handleClose();
+        navigate('/')
     };
 
     return (

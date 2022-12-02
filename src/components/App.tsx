@@ -34,6 +34,7 @@ import MeetingRoomPage from '../pages/MeetingRoom';
 import LibraryPage from '../pages/Library';
 import CoffeePage from '../pages/Coffee';
 import OfficePage from '../pages/Office';
+import StorePage from '../pages/Store';
 
 // Offset to go under AppBarr
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
@@ -209,7 +210,7 @@ function App() {
                     <Route path="/library" element={<LibraryPage />} />
                     <Route path="/coffee" element={<CoffeePage />} />
                     <Route path="/office" element={<OfficePage />} />
-                    <Route path="/store" element={<Page />} />
+                    <Route path="/store" element={<StorePage />} />
                     <Route path="/contact" element={<Page />} />
                 </Routes>
             </Box>
