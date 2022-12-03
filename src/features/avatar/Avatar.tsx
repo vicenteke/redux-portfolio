@@ -11,22 +11,23 @@ import { selectActiveRoom } from '../rooms/roomsSlice';
 
 import { TalkBox } from './TalkBox';
 
+interface AvatarProps {
+    talkbox?: boolean
+}
 
-export function Avatar() {
+export function Avatar({ talkbox=true }: AvatarProps) {
     const avatarImages = ['avatar_1.png', 'avatar_2.png', 'avatar_8.png', 'avatar_7.png']
     const imgBasePath = '/resources/img/avatars/'
 
     const avatar = useAppSelector(selectAvatar);
     const room = useAppSelector(selectActiveRoom);
     const [loadingState, setLoadingState] = useState<LoadingPossibleStates>('loading')
-    const [showText, setShowText] = useState<boolean>(true)
+    const [showText, setShowText] = useState<boolean>(talkbox)
 
     useEffect(() => {
         const loadImage = (path: string) => {
             const img = new Image();
             img.onload = () => {
-                // TODO: fix loading states
-                // setTimeout(() => setLoadingState('ready'), 1000)
                 setLoadingState('ready')
             };
             img.onerror = () => {
@@ -44,15 +45,19 @@ export function Avatar() {
         setShowText(!showText)
     }
 
+    let body = (<>
+        <TalkBox room={room} active={showText} />
+        <Box className='avatar-image' alignSelf='end'>
+            <img src={`${imgBasePath}${avatarImages[avatar]}`} alt="helper avatar" />
+        </Box>
+    </>)
+
     // Render Suspense while image is loading
     if (loadingState === 'loading') {
-        return (
-            <>
-                <Skeleton variant="rounded" animation="wave" className='skeleton-talkbox'/>
-                <Skeleton variant="circular" animation="wave" className='skeleton-avatar-head'/>
-                <Skeleton variant="circular" animation="wave" className='skeleton-avatar-body'/>
-            </>
-        )
+        body = (<>
+                <Skeleton variant="rounded" animation="wave" className='talkbox skeleton-talkbox'/>
+                <Skeleton variant="rounded" animation="wave" className='avatar-image skeleton-avatar'/>
+            </>)
     }
 
     // Render actual component
@@ -66,10 +71,11 @@ export function Avatar() {
             className='avatar-box'
             sx={{ cursor: 'pointer' }}
             >
-                <TalkBox room={room} active={showText} />
+                {body}
+                {/* <TalkBox room={room} active={showText} />
                 <Box className='avatar-image' alignSelf='end'>
                     <img src={`${imgBasePath}${avatarImages[avatar]}`} alt="helper avatar" />
-                </Box>
+                </Box> */}
             </Stack>
     );
 }

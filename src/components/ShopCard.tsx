@@ -18,13 +18,14 @@ export interface ShopCardProps {
     id: number,
     image: string,
     hidden: string,         // file for image while avatar hasn't been purchased
-    is_available: boolean,     // if it has been purchased or not
+    is_available: boolean,  // if it has been purchased or not
     is_active: boolean,
-    onClick: Function
+    onClick: Function,
+    margin: number          // padding top to align images
 }
 
 
-export default function ShopCard({ name, cost, id, image, hidden,
+export default function ShopCard({ name, cost, id, image, hidden, margin,
                                    is_available, is_active, onClick }: ShopCardProps) {
 
     const dispatch = useAppDispatch()
@@ -43,6 +44,7 @@ export default function ShopCard({ name, cost, id, image, hidden,
               onClick={() => onClick()}>
         <CardActionArea>
             <CardMedia
+            sx={{ paddingTop: margin + 'px'}}
             className="avatar-image"
             component="img"
             image={is_available ? image : hidden}
@@ -61,7 +63,8 @@ export default function ShopCard({ name, cost, id, image, hidden,
         {!is_available ?
             <CardActions sx={{ justifyContent: "center", width: "100%" }}>
             <Button variant="contained" size="large" color="success"
-                onClick={() => buyAvatar(id)} disabled={cost > coins}>
+                onClick={() => buyAvatar(id)} disabled={cost > coins}
+                sx={{marginBottom: '12px'}}>
                 <MonetizationOnRoundedIcon />&emsp; {cost}
             </Button>
             </CardActions>

@@ -6,6 +6,7 @@ import { selectAvatar, selectAvatarStatuses, changeAvatar }
     from '../features/avatar/avatarSlice';
 import ShopCard from './ShopCard'
 
+// TODO: Set all the avatars with the same height responsively
 
 export default function AvatarShop() {
     const imgBasePath = '/resources/img/avatars/'
@@ -15,28 +16,32 @@ export default function AvatarShop() {
             cost: 0,
             id: 0,
             image: 'avatar_1.png',
-            hidden: 'avatar_1_hidden.png'
+            hidden: 'avatar_1_hidden.png',
+            margin: 0
         },
         {
             name: "Formal",
-            cost: 100,
+            cost: 150,
             id: 1,
             image: 'avatar_2.png',
-            hidden: 'avatar_2_hidden.png'
+            hidden: 'avatar_2_hidden.png',
+            margin: 16
         },
         {
             name: "Bassist",
-            cost: 200,
+            cost: 250,
             id: 2,
             image: 'avatar_8.png',
-            hidden: 'avatar_8_hidden.png'
+            hidden: 'avatar_8_hidden.png',
+            margin: 45
         },
         {
             name: "Astronaut",
-            cost: 200,
+            cost: 250,
             id: 3,
             image: 'avatar_7.png',
-            hidden: 'avatar_7_hidden.png'
+            hidden: 'avatar_7_hidden.png',
+            margin: 27
         },
     ]
 
@@ -101,13 +106,14 @@ export default function AvatarShop() {
     }, [avatar])
 
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} alignItems="stretch">
 
         {data.map((d) => {
             let available = avatarStatuses[d.id] === 'unlocked'
             return (
                 <Grid key={d.image} item xs={12} md={3}>
                     <ShopCard
+                        margin={d.margin}
                         name={d.name} 
                         cost={d.cost}
                         id={d.id}

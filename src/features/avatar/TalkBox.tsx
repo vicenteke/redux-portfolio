@@ -74,7 +74,6 @@ export function TalkBox({ room, active }: TalkBoxProps) {
         libraryText,
     ]
 
-    // Render actual component
     return (
         <Box className='talkbox-box'>
             <Box className={active ? 'talkbox talkbox-active' : 'talkbox'}>

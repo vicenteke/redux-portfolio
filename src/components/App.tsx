@@ -17,18 +17,14 @@ import Button from '@mui/material/Button';
 
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 
 import { Coins } from '../features/coins/Coins';
 import ResetButton from './ResetButton';
 import Home from '../pages/Home';
-import Page from '../pages/Page';
+import ContactPage from '../pages/Contact';
 import ReceptionPage from '../pages/Reception';
 import MeetingRoomPage from '../pages/MeetingRoom';
 import LibraryPage from '../pages/Library';
@@ -41,10 +37,10 @@ const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 function App() {
     // Constants and setup
-    const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
     const pages: object = {
         'Home': '/',
-        'Help': '/reception'
+        'Help': '/reception',
+        'Contact': '/contact'
     }
     const linkClassName = 'menu-link'
     const drawerWidth = 240
@@ -125,35 +121,10 @@ function App() {
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
+                        {// TODO: add translations
+                        }
                         <Coins />
                         <ResetButton />
-                        {/* <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenSettingsMenu} sx={{ p: 0 }}>
-                                <Settings />
-                            </IconButton>
-                        </Tooltip>
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElSettings}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElSettings)}
-                            onClose={handleCloseSettingsMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseSettingsMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu> */}
                     </Box>
                 </Toolbar>
             </Container>
@@ -169,32 +140,13 @@ function App() {
             <Toolbar />
             <Box sx={{ overflow: 'auto' }}>
                 <List>
-                    
                     {Object.keys(pages).map((page) => {
                         return (<ListItem key={`${page}-drawer`} disablePadding>
-                        {/* <ListItemButton>
-                            <NavLink to={pages[page as keyof typeof pages]}>
-                            <ListItemText primary={page} />
-                            </NavLink>
-                        </ListItemButton> */}
                         <ListItemButton onClick={() => navigateAndCloseDrawer(pages[page as keyof typeof pages])}>
                         <ListItemText primary={page} />
                         </ListItemButton>
                         </ListItem>)})
                     }
-                </List>
-                <Divider />
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                    ))}
                 </List>
             </Box>
         </Drawer>}
@@ -202,7 +154,6 @@ function App() {
             <Box sx={{ flexGrow: 1 }} className='content-box'>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/page" element={<Page />} />
                     <Route path="/reception" element={<ReceptionPage />} />
                     <Route path="/meeting_room" element={<MeetingRoomPage />} />
                     <Route path="/bathroom" element={<Home />} />
@@ -211,7 +162,7 @@ function App() {
                     <Route path="/coffee" element={<CoffeePage />} />
                     <Route path="/office" element={<OfficePage />} />
                     <Route path="/store" element={<StorePage />} />
-                    <Route path="/contact" element={<Page />} />
+                    <Route path="/contact" element={<ContactPage />} />
                 </Routes>
             </Box>
     </>);
