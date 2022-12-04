@@ -11,32 +11,134 @@
         "library": "Here is the information about my studies and technical background."
     },
     "rooms": {
-        "reception": {
-            "title": "Recepción"
+        "reception": "Recepción",
+        "meetingRoom": "Sala de Reuniones",
+        "bathroom": "Baño",
+        "office": "Oficina",
+        "store": "Tienda",
+        "contact": "Contacto",
+        "coffee": "Cafetería",
+        "lab": "Laboratorio",
+        "library": "Biblioteca"
+    },
+    "others": {
+        "home": "Home",
+        "help": "Help",
+        "contact": "Contact",
+        "return": "Return",
+        "now": "Now",
+        "or": "or",
+        "phone": "Phone"
+    },
+    "store": {
+        "casual": "Casual",
+        "formal": "Formal",
+        "bassist": "Bassist",
+        "astronaut": "Astronaut",
+        "content1": "Hey, if you're here it means you are enjoying this portfolio, thank you! Here you can acquire new avatars with the coins you earned. Keep visiting the other rooms to get all of them!"
+    },
+    "faq": {
+        "question1": {
+            "title": "What is this?",
+            "content": "This is a portfolio structured as a game. Each room will be showing a different piece of information and you will gather coins as you explore it."
         },
-        "meetingRoom": {
-            "title": "Sala de Reuniones"
+        "question2": {
+            "title": "To whom is this for?",
+            "content": "In general, to anyone interested in portfolios. That would embrace: clients, employers, recruiters and anyone that is just curious."
         },
-        "bathroom": {
-            "title": "Baño"
+        "question3": {
+            "title": "What will I find here?",
+            "content": "Essentially, this is a portfolio, so you will find projects I've made, professional experience, technical background and so on. I took the liberty to add a few more things, though. To find them out, just explore each room while earning coins."
         },
-        "office": {
-            "title": "Oficina"
+        "question4": {
+            "title": "How do I use it?",
+            "content": "If you have a keyboard, use the arrows to navigate, press enter to visit a room and Esc to return to home. Alternatively, click on the rooms and links to do the exact same thing. The mobile version mimics the desktop in the sense that you should \"move\" through rooms, rather than \"skipping\" to the last one."
         },
-        "store": {
-            "title": "Tienda"
+        "question5": {
+            "title": "Why is it a game?",
+            "content": "It is due to the fact that it sounds tedious to read portfolios that are \"content-only\", like a resumé. Moreover, it was like a study for me, as I could learn some new technologies."
         },
-        "contact": {
-            "title": "Contacto"
-        },
-        "coffee": {
-            "title": "Cafeteria"
-        },
-        "lab": {
-            "title": "Laboratorio"
-        },
-        "library": {
-            "title": "Biblioteca"
+        "question6": {
+            "title": "Who made this?",
+            "content": "My name is Vicente Knihs Erbs. I'm a Full-Stack software developer based in Brazil. You can find me on ",
+            "mailIs": ", my email is ",
+            "phone": " or call me +55 (47) 99627-9577 (Brazil). Let's chat!"
         }
+    },
+    "projects": {
+        "portfolio": {
+            "name": "Game Portfolio",
+            "skills": "JavaScript, ReactJS, Redux, SASS, Material UI",
+            "content": "<i>Game Portfolio</i> is actually this page, as one might presume. It is essentially a front-end project, with no backend, which helped me develop a better knowledge of JavaScript, React and Redux. It's also developed over a framework named Material UI: an implementation of Google's Material Design guidelines."
+        },
+        "airQuality": {
+            "name": "Air Quality Mapping System",
+            "skills": "IoT, C/C++, embedded systems, microcontrollers",
+            "content": "Personal project that acquires data about the air quality and sends that data to an <strong>Android app</strong> using a microcontroller and a Bluetooth module. It was a really complete system, going from electronic and mechanical hardware to a mobile app and storing data to the cloud. The app would control the frequency of the data acquaintance, store it on a <strong>Firebase cloud NoSQL database</strong> and display the quality on a Google Maps view. The system was completely mobile, so one could attach its 3D printed case to a vehicle and map the air quality of a certain region. This project originated a paper which was published on the <i>II Brazilian Interdisciplinary Congress in Science and Technology</i>."
+        },
+        "loraLisha": {
+            "name": "LoRa Mesh",
+            "skills": "IoT, C/C++, embedded systems, hardware design",
+            "content": "Research made at Software/Hardware Integration Lab (LISHA) UFSC aiming to integrate a LoRa Mesh module to the microcontroller and operating system developed at the lab. LoRa is a protocol for network communication focused on IoT, with a wide range and low power consumption. <i>Mesh</i> relates to the topology adopted by that module, and it's not an usual topology for LoRa. I ended up developing abstractions in C/C++ and a Printed Circuit Board (PCB) for that integration with the module."
+        },
+        "thinkTank": {
+            "name": "Think Tank",
+            "skills": "Soft skills, Leadership, Design Thinking, Theory U",
+            "content": "It's a project idealized by the NGO <i>Projeto Resgate</i>, where leaders from several organizations and college students develop soft skills by applying Design Thinking and Theory U to solve real-world problems. First, I took part in the project as usual, then I moved into organizing it and training the leaders along with the creators of the project. Learn about the Think Tank Project: "
+        },
+        "kimak": {
+            "name": "Kimak's Website",
+            "skills": "PHP, MySQL, Bootstrap, JQuery, web development (HTML, CSS and JS)",
+            "content": "This was my first real-life CMS website project, developed using HTML, CSS, JavaScript, PHP, MySQL, Bootstrap and JQuery. You can find it at "
+        }
+    },
+    "work": {
+        "pollux": {
+            "job": "Software Developer",
+            "company": "Pollux, Part of Accenture - Joinville, Brazil",
+            "content": "Full-Stack developer, not only with backend and frontend responsibilities, but also handling IIoT with RaspberryPi's and server setups. The company is focused on robotics and automation as part of Accenture's Industry X services. The stack is basically composed of Python, relational databases (PostgreSQL and SQLite), Bootstrap and jQuery."
+        },
+        "lisha": {
+            "job": "Student Researcher",
+            "company": "Software/Hardware Integration Lab (LISHA) UFSC - Joinville, Brazil",
+            "content": "Research on embedded systems using microcontrollers. The first research was concerned with DDR memories for highly intense data flux from microcontrollers, then moved to IoT with a LoRa network implemented as a mesh topology. The code was made in C and C++, as it was an embedded environment."
+        }
+    },
+    "coffee": {
+        "content1": "Hey, I'm glad you are interested in my portfolio! Sometimes I feel that portfolios are too impersonal or cold, like a resumé in Times New Roman. If you want to, I would like to share a little of what I do beyond working and coding - things that make me feel like me.",
+        "content2": "First of all, music has been part of my life since I was a child. Right now, I'm the bassist of what I would classify as an Indie Rock band. It's called <i>Pétala Quinto</i> and we write our own songs. Check it out on",
+        "content3": "or wherever you want to - other streamings platforms or even on",
+        "content4": "It's something important for me. Moreover, it has given me several opportunities, for instance for volunteering.",
+        "volunteering": "Volunteering",
+        "content5": "Luckily, I could participate in some volunteering projects. Now, there are two that I take part: Escola dos Anjos and Movimento Campista.",
+        "content6": "<strong>Escola dos Anjos</strong>, roughly translated to <i>Angel's School</i>, is a social project where needy children between 8 and 12 years old enjoy a day playing and learning \"how an angel behaves on earth\". Since 2018, I participate mostly with the music interactions and any infrastructure organization required in my home city. Learn about Escola dos Anjos on Escola dos Anjos' Instagram profile:",
+        "content7": "<strong>Movimento Campista</strong> involves Catholic camping retreats separated in different age groups, where I've been taking part in the music teams for children and teenagers since 2017."
+    },
+    "contact": {
+        "content1": "As you arrived here, I believe you would be interested in getting in touch, so we could chat or anything like that. Also, I've talked too much about myself. What about you?",
+        "content2": "Here are a few possibilities to contact me.",
+        "content3": "Feel free to contact me anytime, I'm always open to any conversation!"
+    },
+    "library": {
+        "content1": "Surprisingly enough, I have a <strong>Bachelor's degree in Mechatronics Engineering</strong> from Universidade Federal de Santa Catarina (UFSC), with Academic Honors. UFSC is among the best LATAM universities, if you're a curious person you can learn more at",
+        "ufscSite": "https://en.ufsc.br/",
+        "content2": "Usually, no one knows what mechatronics is about, so let me briefly explain it. It is something like mechanics + electronics + computing. The main focus for us was on <strong>embedded systems</strong>, which include <strong>microcontrollers, real-time operating systems,</strong> some <strong>electronics</strong> and not so much <strong>mechanics</strong>.",
+        "content3": "That creates a foundation over a broad set of subjects - and that's the main reason I've chosen mechatronics. We learn about: Internet of Things (IoT), Artificial Intelligence (AI), PLC, FPGAs, microcontrollers, operating systems, networking, control, power electronics, motors, materials, structures, to name a few.",
+        "content4": "For sure, I've found out that \"my thing\" is software. No mechanics and not that much electronics. <strong>I had learnt to code before choosing to pursue any degree</strong>, but it was during those years that I knew I would become a <strong>software engineer</strong>.",
+        "content5": "Now that you know about what I've studied formally, why not continuing to explore other rooms?"
+    },
+    "meetingRoom": {
+        "content1": "Here's a a list of my work experiences and a description of what I used to do during each of them."
+    },
+    "office": {
+        "content1": "Here is a compilation of projects I've made in the past years. With them, I could learn both hard and soft skills that, even though not being directly related, are important to what I do in software."
+    },
+    "reception": {
+        "content1": "Welcome to my portfolio! I believe it can be boring sometimes to keep looking for software developers CVs and stuff, so I decided to create a nicer experience for you. That's why this is actually a game.",
+        "content2": "How to use it:",
+        "content3": "To move between rooms, click on the rooms or use the keyboard arrows;",
+        "content4": "To enter a room, either double click or press enter;",
+        "content5": "To leave a room, press esc or use the links with an arrow shape on the screen.",
+        "content6": "I'll be here to help you as an avatar. You can return to this room whenever you want to, so you can find some help. I hope you enjoy this \"game portfolio\" as much as I did while developing it. Have fun!"
     }
 }

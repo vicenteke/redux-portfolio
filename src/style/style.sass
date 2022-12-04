@@ -75,8 +75,6 @@ body
     height: 100%
 
 .avatar-box
-    // overflow-x: hidden
-    // overflow-y: hidden
     height: 100%
     @media (max-width: 900px)
         position: fixed
@@ -86,7 +84,6 @@ body
         width: 100vw
         z-index: 100
         max-height: 30vh
-        // height: 30vh
         background: linear-gradient(0deg, white 50%, rgba(255, 255, 255, .8) 85%, transparent 100%)
 
 .avatar-image
@@ -114,19 +111,21 @@ body
         border-radius: 16px 16px 16px 0
 
 .talkbox-active
-    border: 2px solid #3f3f3f
     box-shadow: 5px 5px 15px #969696
 
 .nice-gradient
-    // background: linear-gradient(85deg, ${theme.palette.info.main} 5%, #4059AD 35%)
-    // background: linear-gradient(85deg, #7F53AC 30%, #647DEE 90%)
-    // background: linear-gradient(85deg, #63A4FF 15%, #83EAF1 40%)
-    // background: linear-gradient(20deg, #009FFD 20%, #00c6fd 80%)
-    // background: linear-gradient(-30deg, #1391ff 20%, #00c6fd 90%)
     background: linear-gradient(-30deg, #0288d1 20%, #00c6fd 90%)
 
 .active-avatar
     border: 1px solid $warning-light-color
 
-.conacts
+.contacts
     font-size: 1.3em !important
+
+.flag-selector
+    box-shadow: 5px 5px 15px #969696
+
+.flag-select
+    height: 1em
+    width: auto
+    margin-right: 1em

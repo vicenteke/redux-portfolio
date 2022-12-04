@@ -21,7 +21,7 @@ export default function ContactPage() {
                 <br/>
                 {t('contact.content2')}
             </Typography><br/>
-            <Typography variant="body1" component="p" className="conacts">
+            <Typography variant="body1" component="p" className="contacts">
                 <WhatsAppIcon color="success"/> {t('others.phone')}: <Link href="https://api.whatsapp.com/send?phone=5547996279577" target="_blank" rel="noreferrer" underline="hover">+55 (47) 99627-9577</Link>
                 <br/>
                 <MailOutlineIcon color="error"/> Email: <Link href="mailto:vicenteknihs@gmail.com" target="_blank" rel="noreferrer" underline="hover">vicenteknihs@gmail.com</Link>

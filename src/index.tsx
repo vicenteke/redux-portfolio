@@ -21,7 +21,7 @@ import common_es from "./translations/es/common.json";
 
 i18next.init({
     interpolation: { escapeValue: false },
-    lng: 'en',
+    lng: 'pt',
     resources: {
         en: {
             common: common_en
@@ -29,7 +29,7 @@ i18next.init({
         es: {
             common: common_es
         },
-        "pt-br": {
+        pt: {
             common: common_pt_br
         },
     },

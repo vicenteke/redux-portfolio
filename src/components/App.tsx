@@ -24,6 +24,7 @@ import ListItemText from '@mui/material/ListItemText';
 
 import { Coins } from '../features/coins/Coins';
 import ResetButton from './ResetButton';
+import LanguageSelect from './LanguageSelect';
 import Home from '../pages/Home';
 import ContactPage from '../pages/Contact';
 import ReceptionPage from '../pages/Reception';
@@ -123,9 +124,8 @@ function App() {
                         })}
                     </Box>
 
-                    <Box sx={{ flexGrow: 0 }}>
-                        {// TODO: add translations
-                        }
+                    <Box sx={{ flexGrow: 0, flexDirection: 'column' }}>
+                        <LanguageSelect />
                         <Coins />
                         <ResetButton />
                     </Box>
