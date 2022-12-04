@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -10,20 +11,21 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import Typography from '@mui/material/Typography';
 
 export default function WorkTimeline() {
+    const [t, i18n] = useTranslation('common');
     const data = [
         {
             key: "pollux_dev",
-            job: "Software Developer",
-            company: "Pollux, Part of Accenture - Joinville, Brazil",
-            date: '2021 - Now',
-            content: <>Full-Stack developer, not only with backend and frontend responsibilities, but also handling IIoT with RaspberryPi's and servers setups. The company is focused on robotics and automation as part of Accenture's Industry X services. The stack is basically comprised of Python, relational databases (PostgreSQL and SQLite), Bootstrap and jQuery.</>
+            job: t('work.pollux.job'),
+            company: t('work.pollux.company'),
+            date: `2021 - ${t('others.now')}`,
+            content: <>{t('work.pollux.content')}</>
         },
         {
             key: "ufsc_lisha",
-            job: "Student Researcher",
-            company: "Software/Hardware Integration Lab (LISHA) UFSC - Joinville, Brazil",
+            job: t('work.lisha.job'),
+            company: t('work.lisha.company'),
             date: '2019 - 2020',
-            content: <>Researches on embedded systems using microcontrollers. The first research was concerned with DDR memories for highly intense data flux from microcontrollers, then moved to to IoT with a LoRa network implemented as a mesh topology. The code was made in C and C++, as it was an embedded environment.</>
+            content: <>{t('work.lisha.content')}</>
         }
     ]
     return (

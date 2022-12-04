@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
@@ -10,17 +11,18 @@ import ReturnButton from '../components/ReturnButton'
 import { Avatar } from '../features/avatar/Avatar';
 
 export default function ContactPage() {
+    const [t, i18n] = useTranslation('common');
     return (
         <>
             <ReturnButton />
-            <br/><br/><Typography variant="h1" component="h1">Phone</Typography><br/>
+            <br/><br/><Typography variant="h1" component="h1">{t('rooms.contact')}</Typography><br/>
             <Typography variant="body1" component="p">
-                As you arrived here, I believe you would be interested in getting in touch, so we could chat or anything like that. Also, I've talked too much about myself. What about you?
+                {t('contact.content1')}
                 <br/>
-                Here are a few possibilities to contact me.
+                {t('contact.content2')}
             </Typography><br/>
             <Typography variant="body1" component="p" className="conacts">
-                <WhatsAppIcon color="success"/> Phone: <Link href="https://api.whatsapp.com/send?phone=5547996279577" target="_blank" rel="noreferrer" underline="hover">+55 (47) 99627-9577</Link>
+                <WhatsAppIcon color="success"/> {t('others.phone')}: <Link href="https://api.whatsapp.com/send?phone=5547996279577" target="_blank" rel="noreferrer" underline="hover">+55 (47) 99627-9577</Link>
                 <br/>
                 <MailOutlineIcon color="error"/> Email: <Link href="mailto:vicenteknihs@gmail.com" target="_blank" rel="noreferrer" underline="hover">vicenteknihs@gmail.com</Link>
                 <br/>
@@ -28,7 +30,7 @@ export default function ContactPage() {
                 <br/>
             </Typography><br/>
             <Typography variant="body1" component="p">
-                Feel free to contact me anytime, I'm always open to any conversation!
+                {t('contact.content3')}
             </Typography><br/>
             <Avatar talkbox={false} />
         </>

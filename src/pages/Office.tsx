@@ -1,16 +1,18 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Typography from '@mui/material/Typography';
 import ReturnButton from '../components/ReturnButton'
 import ProjectsTimeline from '../components/ProjectsTimeline';
 
 
 export default function OfficePage() {
+    const [t, i18n] = useTranslation('common');
     return (
         <>
             <ReturnButton />
-            <br/><br/><Typography variant="h1" component="h1">Office</Typography><br/>
+            <br/><br/><Typography variant="h1" component="h1">{t('rooms.office')}</Typography><br/>
             <Typography variant="body1" component="p">
-            Here is a compilation of projects I've made in the past years. With them, I could learn both hard and soft skills that, even though not being directly related, are important to what I do in software.
+                {t('office.content1')}
             </Typography><br/>
             <br/>
             <ProjectsTimeline />

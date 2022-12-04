@@ -1,17 +1,19 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Typography from '@mui/material/Typography';
 import ReturnButton from '../components/ReturnButton';
 import AvatarShop from '../components/AvatarShop';
 
 
 export default function StorePage() {
+    const [t, i18n] = useTranslation('common');
     return (
         <>
             <ReturnButton />
-            <br/><br/><Typography variant="h1" component="h1">Store</Typography><br/>
+            <br/><br/><Typography variant="h1" component="h1">{t('rooms.store')}</Typography><br/>
 
             <Typography variant="body1" component="p">
-            Hey, if you're here it means you are enjoying this portfolio, thank you! Here you can acquire new avatars with the coins you earned. Keep visiting the other rooms to get all of them!
+                {t('store.content1')}
             </Typography><br/>
             <AvatarShop />
         </>

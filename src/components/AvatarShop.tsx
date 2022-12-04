@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import Grid from '@mui/material/Grid';
 
 import { useAppSelector, useAppDispatch } from '../app/hooks';
@@ -9,10 +10,12 @@ import ShopCard from './ShopCard'
 // TODO: Set all the avatars with the same height responsively
 
 export default function AvatarShop() {
+    const [t, i18n] = useTranslation('common');
+
     const imgBasePath = '/resources/img/avatars/'
     const data = [
         {
-            name: "Casual",
+            name: t('store.casual'),
             cost: 0,
             id: 0,
             image: 'avatar_1.png',
@@ -20,7 +23,7 @@ export default function AvatarShop() {
             margin: 0
         },
         {
-            name: "Formal",
+            name: t('store.formal'),
             cost: 150,
             id: 1,
             image: 'avatar_2.png',
@@ -28,7 +31,7 @@ export default function AvatarShop() {
             margin: 16
         },
         {
-            name: "Bassist",
+            name: t('store.bassist'),
             cost: 250,
             id: 2,
             image: 'avatar_8.png',
@@ -36,7 +39,7 @@ export default function AvatarShop() {
             margin: 45
         },
         {
-            name: "Astronaut",
+            name: t('store.astronaut'),
             cost: 250,
             id: 3,
             image: 'avatar_7.png',

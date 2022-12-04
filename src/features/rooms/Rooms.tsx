@@ -40,7 +40,6 @@ export function Rooms() {
         } else {
             if ((roomStatuses[index - 1] !== 'notSeen' && index > 0) ||
                 (roomStatuses[index + 1] !== 'notSeen' && index < 8)) return true
-            // if (activeRoom === index - 1 || activeRoom === index + 1) return true
         }
         return false
     }

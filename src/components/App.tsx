@@ -5,6 +5,7 @@ import {
     Link,
     useNavigate
 } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -36,12 +37,14 @@ import StorePage from '../pages/Store';
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 function App() {
+    const [t, i18n] = useTranslation('common');
+
     // Constants and setup
-    const pages: object = {
-        'Home': '/',
-        'Help': '/reception',
-        'Contact': '/contact'
-    }
+    const pages = [
+        {title: t('others.home'), route: '/'},
+        {title: t('others.help'), route: '/reception'},
+        {title: t('others.contact'), route: '/contact'}
+    ]
     const linkClassName = 'menu-link'
     const drawerWidth = 240
 
@@ -109,13 +112,13 @@ function App() {
                         </IconButton>
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {Object.keys(pages).map((page) => {
+                        {pages.map((page) => {
                             return (<Button
-                                key={page}
+                                key={page.title}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                <Link to={pages[page as keyof typeof pages]} className={linkClassName}>{page}</Link>
+                                <Link to={page.route} className={linkClassName}>{page.title}</Link>
                             </Button>)
                         })}
                     </Box>
@@ -140,10 +143,10 @@ function App() {
             <Toolbar />
             <Box sx={{ overflow: 'auto' }}>
                 <List>
-                    {Object.keys(pages).map((page) => {
-                        return (<ListItem key={`${page}-drawer`} disablePadding>
-                        <ListItemButton onClick={() => navigateAndCloseDrawer(pages[page as keyof typeof pages])}>
-                        <ListItemText primary={page} />
+                    {pages.map((page) => {
+                        return (<ListItem key={`${page.title}-drawer`} disablePadding>
+                        <ListItemButton onClick={() => navigateAndCloseDrawer(page.route)}>
+                        <ListItemText primary={page.title} />
                         </ListItemButton>
                         </ListItem>)})
                     }

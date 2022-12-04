@@ -1,0 +1,42 @@
+{
+    "talkbox": {
+        "reception": "Welcome to my portfolio! Use the mouse or the arrows to navigate and press enter to check a room.\n\nHere at the reception you will find some help and instructions.",
+        "meetingRoom": "I've made a brief summary of my professional experience, also presenting the key technologies and responsibilities involved.",
+        "bathroom": "Hey, there's nothing for you to see here! Check the other rooms.",
+        "office": "I brought you some of the projects I've made apart from work. That's how developers have fun most of their nights.",
+        "store": "Time to go shopping!\n\nWhat about some fancier looking?",
+        "contact": "Looks like you got interested, that is great\n\nHere are my contact info so we can get in touch.",
+        "coffee": "What about we get to know each other a little bit?\n\nI would love to share with you some things I like to do on my free time.",
+        "lab": "We are still working on some research.\n\nI would keep exploring other spaces if I were you.",
+        "library": "Here is the information about my studies and technical background."
+    },
+    "rooms": {
+        "reception": {
+            "title": "Recepção"
+        },
+        "meetingRoom": {
+            "title": "Sala de Reuniões"
+        },
+        "bathroom": {
+            "title": "Banheiro"
+        },
+        "office": {
+            "title": "Escritório"
+        },
+        "store": {
+            "title": "Loja"
+        },
+        "contact": {
+            "title": "Contato"
+        },
+        "coffee": {
+            "title": "Café"
+        },
+        "lab": {
+            "title": "Laboratório"
+        },
+        "library": {
+            "title": "Biblioteca"
+        }
+    }
+}

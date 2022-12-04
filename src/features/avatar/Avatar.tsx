@@ -72,10 +72,6 @@ export function Avatar({ talkbox=true }: AvatarProps) {
             sx={{ cursor: 'pointer' }}
             >
                 {body}
-                {/* <TalkBox room={room} active={showText} />
-                <Box className='avatar-image' alignSelf='end'>
-                    <img src={`${imgBasePath}${avatarImages[avatar]}`} alt="helper avatar" />
-                </Box> */}
             </Stack>
     );
 }
