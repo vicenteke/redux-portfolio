@@ -41,7 +41,7 @@
     "faq": {
         "question1": {
             "title": "O que é isso?",
-            "content": "Isso é um portfolio no formato de um jogo. Cada sala irá apresentar uma informação diferente e você irá coletar moedas conforme você as explora. A intenção é que seja pelo menos um pouco mais divertido para você, quando comparado com um currículo Times New Roman"
+            "content": "Isso é um portfolio no formato de um jogo. Cada sala irá apresentar uma informação diferente e você irá coletar moedas conforme você as explora. A intenção é que seja pelo menos um pouco mais divertido para você, quando comparado com um currículo Times New Roman."
         },
         "question2": {
             "title": "Para quem é isso?",
@@ -89,7 +89,7 @@
         },
         "kimak": {
             "name": "Website Kimak",
-            "skills": "PHP, MySQL, Bootstrap, JQuery, desenvolvimento web (HTML, CSS and JS)",
+            "skills": "PHP, MySQL, Bootstrap, JQuery, desenvolvimento web (HTML, CSS e JS)",
             "content": "Esse foi o meu primeiro projeto real de CMS, desenvolvido usando HTML, CSS, JavaScript, PHP, MySQL, Bootstrap e jQuery. Você o encontra em "
         }
     },
@@ -97,7 +97,7 @@
         "pollux": {
             "job": "Desenvolvedor de Software",
             "company": "Pollux, Part of Accenture - Joinville, Brasil",
-            "content": "Desenvolverdor Full-Stack, não apenas com responsabilidades de back-end e front-end, mas também lidando com IIoT (Internet Industrial das Coisas) com RaspberryPi's e setup de servidores. A organização é focada em robótica e automação como parte dos serviços da Indusrty X da Accenture. A stack incluía, basicamente, Python, bancos relacionais SQL (PostgreSQL e SQLite), Bootstrap e jQuery."
+            "content": "Desenvolverdor Full-Stack, não apenas com responsabilidades de back-end e front-end, mas também lidando com IIoT (Internet Industrial das Coisas) com RaspberryPi's e setup de servidores. A organização é focada em robótica e automação como parte dos serviços da Indusrty X da Accenture. A stack incluía, basicamente, Python, bancos relacionais SQL (PostgreSQL e SQLite), Bootstrap e jQuery. Além disso, vários hardwares foram integrados e outras tecnologias como ReactJS, FastAPI, Docker e Docker-Compose passaram a fazer parte do framework."
         },
         "lisha": {
             "job": "Iniciação Científica (pesquisa)",

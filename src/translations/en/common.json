@@ -96,7 +96,7 @@
         "pollux": {
             "job": "Software Developer",
             "company": "Pollux, Part of Accenture - Joinville, Brazil",
-            "content": "Full-Stack developer, not only with back-end and front-end responsibilities, but also handling IIoT (Industrial Internet of Things) with RaspberryPi's and server setups. The company is focused on robotics and automation as part of Accenture's Industry X services. The stack is basically composed of Python, relational databases (PostgreSQL and SQLite), Bootstrap and jQuery."
+            "content": "Full-Stack developer, not only with back-end and front-end responsibilities, but also handling IIoT (Industrial Internet of Things) with RaspberryPi's and server setups. The company is focused on robotics and automation as part of Accenture's Industry X services. The stack is basically composed of Python, relational databases (PostgreSQL and SQLite), Bootstrap and jQuery. Moreover, several hardwares were integrated and other technologies such as ReactJS, FastAPI, Docker and Docker-Compose joined the stack."
         },
         "lisha": {
             "job": "Student Researcher",
