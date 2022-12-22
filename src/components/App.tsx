@@ -114,13 +114,15 @@ function App() {
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => {
-                            return (<Button
-                                key={page.title}
+                            return (
+                            <Link to={page.route} className={linkClassName} key={page.title}>
+                            <Button
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                <Link to={page.route} className={linkClassName}>{page.title}</Link>
-                            </Button>)
+                                {page.title}
+                            </Button>
+                            </Link>)
                         })}
                     </Box>
 
