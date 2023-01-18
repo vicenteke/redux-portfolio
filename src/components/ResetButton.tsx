@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
+import ReplayIcon from '@mui/icons-material/Replay';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -37,9 +38,13 @@ export default function ResetButton() {
 
     return (
         <>
-        <Button variant="contained" sx={{ marginLeft: '16px' }} color="error"
-                onClick={handleClickOpen}>
-            Reset
+        <Button
+            variant="contained"
+            sx={{ marginLeft: '16px', minWidth: 'auto' }}
+            color="error"
+            onClick={handleClickOpen}
+        >
+            <ReplayIcon />
         </Button>
         <Dialog
             open={open}

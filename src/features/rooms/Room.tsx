@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from '../../app/hooks'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import useSound from 'use-sound';
 
 import Skeleton from '@mui/material/Skeleton';
@@ -11,29 +11,23 @@ import {
     setActive
 } from './roomsSlice';
 import { incrementSeen, incrementVisited } from './../coins/coinsSlice'
+import { selectSound } from '../sound/soundSlice';
 
 import LoadingPossibleStates from '../../constants/LoadingPossibleStates'
-import showerSfx from '../../sounds/shower.mp3'
-import bellSfx from '../../sounds/bell-ring.mp3'
-import paperSfx from '../../sounds/paper.mp3'
-import laserSfx from '../../sounds/laser-gun.mp3'
-import phoneSfx from '../../sounds/phone-ringing.mp3'
-import laptopSfx from '../../sounds/laptop.mp3'
-import cashSfx from '../../sounds/cash-register.mp3'
-import coffeeSfx from '../../sounds/coffee.mp3'
-import correctSfx from '../../sounds/correct.mp3'
-
 
 export interface RoomProps {
     active: boolean,
     state: RoomPossibleStates,
     page: string,
     clickable: boolean,
-    roomNumber: number
+    roomNumber: number,
+    sounds: Array<any>
 }
 
-export function Room({ active, state, page, clickable, roomNumber }: RoomProps) {
+export function Room({ active, state, page, clickable, roomNumber, sounds }: RoomProps) {
     const [loadingState, setLoadingState] = useState<LoadingPossibleStates>('loading')
+    const soundEnabled = useAppSelector(selectSound)
+
     const roomId = `room-${roomNumber}`
     const imgBasePath = '/resources/img/rooms/'
     const imgSuffixes = {
@@ -45,36 +39,14 @@ export function Room({ active, state, page, clickable, roomNumber }: RoomProps) 
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
 
-    const [showerSound] = useSound(showerSfx, { volume: 0.1, interrupt: true,
-                                                sprite: { default: [1000, 2500]} })
-    const [bellSound] = useSound(bellSfx, { volume: 0.5, playbackRate: 2, interrupt: true,
-                                            sprite: { default: [500, 5500]} })
-    const [cashSound] = useSound(cashSfx, { volume: 0.25, playbackRate: 2, interrupt: true,
-                                            sprite: { default: [0, 2000]} })
-    const [paperSound] = useSound(paperSfx, { volume: 0.25, playbackRate: 1, interrupt: true,
-                                            sprite: { default: [600, 4000]} })
-    const [laserSound] = useSound(laserSfx, { volume: 0.1, playbackRate: 2, interrupt: true,
-                                            sprite: { default: [0, 2000]} })
-    const [laptopSound] = useSound(laptopSfx, { volume: 0.35, playbackRate: 0.8, interrupt: true,
-                                            sprite: { default: [0, 1500]} })
-    const [phoneSound] = useSound(phoneSfx, { volume: 0.35, playbackRate: 2, interrupt: true,
-                                            sprite: { default: [0, 2000]} })
-    const [coffeeSound] = useSound(coffeeSfx, { volume: 0.35, playbackRate: 2, interrupt: true,
-                                            sprite: { default: [0, 4000]} })
-    const [correctSound] = useSound(correctSfx, { volume: 0.35, playbackRate: 2, interrupt: true,
-                                            sprite: { default: [0, 2000]} })
-    const sounds = [
-        bellSound, correctSound, showerSound,
-        laptopSound, cashSound, phoneSound,
-        coffeeSound, laserSound, paperSound,
-    ]
-
     const handleRoomClick = (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault()
         const target = event.currentTarget
         if (target.id === roomId) {
             if (clickable) {
-                sounds[roomNumber]({ id: 'default' })
+                if (soundEnabled)
+                    sounds[roomNumber]({ id: 'default' })
+
                 dispatch(setActive(roomNumber))
                 if (state === 'notSeen') {
                     dispatch(incrementSeen())

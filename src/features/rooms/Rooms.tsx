@@ -17,10 +17,11 @@ import {
     RoomPossibleStates
 } from './roomsSlice';
 import { incrementSeen, incrementVisited } from '../coins/coinsSlice'
+import { selectSound } from '../sound/soundSlice';
 
 import { Room } from './Room';
 
-// Sounds import
+// Sound imports
 import flipcardSfx from '../../sounds/flipcard.mp3'
 import showerSfx from '../../sounds/shower.mp3'
 import bellSfx from '../../sounds/bell-ring.mp3'
@@ -40,6 +41,7 @@ export function Rooms() {
 
     const activeRoom = useAppSelector(selectActiveRoom);
     const roomStatuses = useAppSelector(selectRoomStatuses);
+    const soundEnabled = useAppSelector(selectSound)
     const dispatch = useAppDispatch();
     let navigate = useNavigate();
 
@@ -84,33 +86,37 @@ export function Rooms() {
     }
     
     useEffect(() => {
-        // Anything in here is fired on component mount.
         const handleKeyDown = (event: KeyboardEvent) => {
             const keyName = event.key
             switch (keyName) { 
                 case 'ArrowDown':
-                    moveSound()
+                    if (soundEnabled)
+                        moveSound()
                     dispatch(moveDown())
                     dispatch(incrementSeen())
                     break
                 case 'ArrowUp':
-                    moveSound()
+                    if (soundEnabled)
+                        moveSound()
                     dispatch(moveUp())
                     dispatch(incrementSeen())
                     break
                 case 'ArrowLeft':
-                    moveSound()
+                    if (soundEnabled)
+                        moveSound()
                     dispatch(moveLeft())
                     dispatch(incrementSeen())
                     break
                 case 'ArrowRight':
-                    moveSound()
+                    if (soundEnabled)
+                        moveSound()
                     dispatch(moveRight())
                     dispatch(incrementSeen())
                     break
                 case 'Enter':
                     event.preventDefault()
-                    sounds[activeRoom]({ id: 'default' })
+                    if (soundEnabled)
+                        sounds[activeRoom]({ id: 'default' })
                     dispatch(setActiveRoomAsVisited())
                     dispatch(incrementVisited())
                     navigate(`/${pages[activeRoom]}`)
@@ -121,21 +127,21 @@ export function Rooms() {
 
         document.addEventListener('keydown', handleKeyDown);
 
-        return () => {
-            // Anything in here is fired on component unmount.
-            document.removeEventListener('keydown', handleKeyDown);
-        }
+        return () => document.removeEventListener('keydown', handleKeyDown)
     }, [activeRoom])
 
     return (
         <Grid container spacing={2}>
             {roomStatuses.map((r, i) => 
                 <Grid key={`Room_${i}`} item xs={12} md={4}>
-                    <Room state={r}
-                            page={pages[i]}
-                            active={activeRoom === i}
-                            clickable={isClickable(i, r)}
-                            roomNumber={i}/>
+                    <Room
+                        state={r}
+                        page={pages[i]}
+                        active={activeRoom === i}
+                        clickable={isClickable(i, r)}
+                        roomNumber={i}
+                        sounds={sounds}
+                    />
                 </Grid>
             )}
         </Grid>

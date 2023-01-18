@@ -5,8 +5,6 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import Popper from '@mui/material/Popper';
 
 
@@ -48,7 +46,7 @@ export default function LanguageSelect() {
 
     return (
         <>
-        <Button aria-describedby={id} sx={{ mr: 1 }} size='large' onClick={handleClick}>
+        <Button aria-describedby={id} sx={{ mr: { md: 1 } }} size='large' onClick={handleClick}>
             <img alt={langObject.alt} src={imgBasePath + langObject.flag}/>
         </Button>
         <Popper

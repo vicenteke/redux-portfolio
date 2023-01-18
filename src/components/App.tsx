@@ -22,6 +22,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 
+import SoundButton from '../features/sound/SoundButton';
 import { Coins } from '../features/coins/Coins';
 import ResetButton from './ResetButton';
 import LanguageSelect from './LanguageSelect';
@@ -33,6 +34,7 @@ import LibraryPage from '../pages/Library';
 import CoffeePage from '../pages/Coffee';
 import OfficePage from '../pages/Office';
 import StorePage from '../pages/Store';
+
 
 // Offset to go under AppBarr
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
@@ -103,7 +105,6 @@ function App() {
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
-                            aria-label="account of current user"
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={toggleNavMenu}
@@ -128,6 +129,7 @@ function App() {
 
                     <Box sx={{ flexGrow: 0, flexDirection: 'column' }}>
                         <LanguageSelect />
+                        <SoundButton />
                         <Coins />
                         <ResetButton />
                     </Box>

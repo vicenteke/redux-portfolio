@@ -6,6 +6,7 @@ import storageSession from 'redux-persist/lib/storage/session'
 import coinsReducer from '../features/coins/coinsSlice';
 import roomsReducer from '../features/rooms/roomsSlice';
 import avatarReducer from '../features/avatar/avatarSlice';
+import soundReducer from '../features/sound/soundSlice';
 
 const persistConfig = {
     key: 'root',
@@ -16,6 +17,7 @@ const reducers = combineReducers({
     coins: coinsReducer,
     rooms: roomsReducer,
     avatar: avatarReducer,
+    sound: soundReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, reducers)
