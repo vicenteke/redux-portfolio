@@ -28,7 +28,14 @@
         "return": "Return",
         "now": "Now",
         "or": "or",
-        "phone": "Phone"
+        "phone": "Phone",
+        "language": "Language",
+        "cancel": "Cancel",
+        "reset": {
+            "title": "Reset your progress?",
+            "body": "Are you sure you want to reset all your progress? All data will be lost, including coins and avatars.",
+            "confirm": "Yes, reset my progress"
+        }
     },
     "store": {
         "casual": "Casual",
@@ -140,5 +147,10 @@
         "content4": "To enter a room, either double click or press Enter;",
         "content5": "To leave a room, press Esc or use the links on the screen.",
         "content6": "I'll be here to help you as an avatar. You can return to this room whenever you want to, so you can find some help. I hope you enjoy this \"game portfolio\" as much as I did while developing it. Have fun!"
+    },
+    "flag": {
+        "altEn": "USA flag",
+        "altEs": "Spanish flag",
+        "altPt": "Brazilian flag"
     }
 }

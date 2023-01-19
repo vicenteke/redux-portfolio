@@ -8,6 +8,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { useTranslation } from 'react-i18next';
 
 import { useAppDispatch } from '../app/hooks'
 
@@ -16,6 +17,7 @@ import { resetCoins } from '../features/coins/coinsSlice';
 import { resetAvatar } from '../features/avatar/avatarSlice'
 
 export default function ResetButton() {
+    const [t, i18n] = useTranslation('common');
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
     const [open, setOpen] = React.useState(false);
@@ -53,18 +55,17 @@ export default function ResetButton() {
             aria-describedby="alert-dialog-description"
         >
             <DialogTitle id="alert-dialog-title">
-            {"Reset your progress?"}
+                {t("others.reset.title")}
             </DialogTitle>
             <DialogContent>
             <DialogContentText id="alert-dialog-description">
-                Are you sure you want to reset all your progress?
-                All data will be lost, including coins and avatars.
+                {t("others.reset.body")}
             </DialogContentText>
             </DialogContent>
             <DialogActions>
-            <Button onClick={handleClose}>Cancel</Button>
+            <Button onClick={handleClose}>{t("others.cancel")}</Button>
             <Button onClick={handleReset} autoFocus>
-                Yes, reset my progress
+                {t("others.reset.confirm")}
             </Button>
             </DialogActions>
         </Dialog>

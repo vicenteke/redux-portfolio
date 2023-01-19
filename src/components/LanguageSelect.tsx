@@ -6,6 +6,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import Popper from '@mui/material/Popper';
+import { Box } from '@mui/material';
 
 
 export default function LanguageSelect() {
@@ -18,17 +19,18 @@ export default function LanguageSelect() {
     const languages = {
         'en': {
             flag: 'usa.svg',
-            alt: t('language.altEn')
+            alt: t('flag.altEn')
         },
         'es': {
             flag: 'spain.svg',
-            alt: t('language.altEs')
+            alt: t('flag.altEs')
         },
         'pt': {
             flag: 'brazil.svg',
-            alt: t('language.altPt')
+            alt: t('flag.altPt')
         },
     }
+
     const langObject = languages[lang as keyof typeof languages]
     const id = open ? 'language-select' : undefined;
     
@@ -47,7 +49,7 @@ export default function LanguageSelect() {
     return (
         <>
         <Button aria-describedby={id} sx={{ mr: { md: 1 } }} size='large' onClick={handleClick}>
-            <img alt={langObject.alt} src={imgBasePath + langObject.flag}/>
+            <img className='flag-button' alt={langObject.alt} src={imgBasePath + langObject.flag} />
         </Button>
         <Popper
             id={id}
@@ -62,7 +64,7 @@ export default function LanguageSelect() {
                     <img
                         className="flag-select"
                         src="/resources/img/flags/usa.svg"
-                        alt={String(t('language.altEn'))}
+                        alt={String(t('flag.altEn'))}
                     /> English
                     </ListItemButton>
                 </ListItem>
@@ -71,7 +73,7 @@ export default function LanguageSelect() {
                     <img
                         className="flag-select"
                         src="/resources/img/flags/spain.svg"
-                        alt={String(t('language.altEs'))}
+                        alt={String(t('flag.altEs'))}
                     /> Español
                     </ListItemButton>
                 </ListItem>
@@ -80,7 +82,7 @@ export default function LanguageSelect() {
                     <img
                         className="flag-select"
                         src="/resources/img/flags/brazil.svg"
-                        alt={String(t('language.altPt'))}
+                        alt={String(t('flag.altPt'))}
                     /> Português
                     </ListItemButton>
                 </ListItem>

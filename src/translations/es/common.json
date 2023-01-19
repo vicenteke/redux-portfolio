@@ -29,7 +29,13 @@
         "now": "Hoy",
         "or": "o",
         "phone": "Teléfono",
-        "language": "Lenguaje"
+        "language": "Lenguaje",
+        "cancel": "Cancelar",
+        "reset": {
+            "title": "¿Reiniciar progreso?",
+            "body": "¿Está cierto que quiere reiniciar todo su progreso? Todos los datos serán borrados, incluyendo monedas y avatares.",
+            "confirm": "Sí, reiniciar progreso"
+        }
     },
     "store": {
         "casual": "Casual",
@@ -142,7 +148,7 @@
         "content5": "Para salir de una habitación, presione Esc o use los enlaces en pantalla.",
         "content6": "Estaré aquí para ayudarte como un avatar. Puedes volver a esta habitación en cualquier momento, así encontrarás ayuda. Espero que disfrutes de este \"portfolio de juegos\" tanto como yo lo hice mientras trabajaba en él. ¡Que lo pases bien!"
     },
-    "language": {
+    "flag": {
         "altEn": "Bandera de los EEUU",
         "altEs": "Bandera da España",
         "altPt": "Bandera de Brasil"
