@@ -83,6 +83,7 @@ function App() {
             const keyName = event.key
             switch (keyName) { 
                 case 'Escape':
+                    event.preventDefault()
                     navigate('/')
                     break
                 default: break
