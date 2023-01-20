@@ -19,12 +19,11 @@ export interface RoomProps {
     active: boolean,
     state: RoomPossibleStates,
     page: string,
-    clickable: boolean,
     roomNumber: number,
     sounds: Array<any>
 }
 
-export function Room({ active, state, page, clickable, roomNumber, sounds }: RoomProps) {
+export function Room({ active, state, page, roomNumber, sounds }: RoomProps) {
     const [loadingState, setLoadingState] = useState<LoadingPossibleStates>('loading')
     const soundEnabled = useAppSelector(selectSound)
 
@@ -43,18 +42,16 @@ export function Room({ active, state, page, clickable, roomNumber, sounds }: Roo
         event.preventDefault()
         const target = event.currentTarget
         if (target.id === roomId) {
-            if (clickable) {
-                if (soundEnabled)
-                    sounds[roomNumber]({ id: 'default' })
+            if (soundEnabled)
+                sounds[roomNumber]({ id: 'default' })
 
-                dispatch(setActive(roomNumber))
-                if (state === 'notSeen') {
-                    dispatch(incrementSeen())
-                } else if (active) {
-                    dispatch(setRoomAsVisited(roomNumber))
-                    dispatch(incrementVisited())
-                    navigate(`/${page}`)
-                }
+            dispatch(setActive(roomNumber))
+            if (state === 'notSeen') {
+                dispatch(incrementSeen())
+            } else {
+                dispatch(setRoomAsVisited(roomNumber))
+                dispatch(incrementVisited())
+                navigate(`/${page}`)
             }
         }
     }

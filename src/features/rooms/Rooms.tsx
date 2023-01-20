@@ -13,8 +13,7 @@ import {
     moveUp,
     setActiveRoomAsVisited,
     selectActiveRoom,
-    selectRoomStatuses,
-    RoomPossibleStates
+    selectRoomStatuses
 } from './roomsSlice';
 import { incrementSeen, incrementVisited } from '../coins/coinsSlice'
 import { selectSound } from '../sound/soundSlice';
@@ -69,21 +68,6 @@ export function Rooms() {
         laptopSound, cashSound, phoneSound,
         coffeeSound, laserSound, paperSound,
     ]
-
-    const isClickable = (index: number, state: RoomPossibleStates) => {
-        // A room is clickable if it's next to the active room
-        if (state !== 'notSeen') return true
-        if (window.innerWidth > 900) {
-            if (activeRoom < 6 && activeRoom === index - 3) return true
-            if (activeRoom > 2 && activeRoom === index + 3) return true
-            if (activeRoom % 3 !== 0 && activeRoom === index + 1) return true
-            if (activeRoom % 3 !== 2 && activeRoom === index - 1) return true
-        } else {
-            if ((roomStatuses[index - 1] !== 'notSeen' && index > 0) ||
-                (roomStatuses[index + 1] !== 'notSeen' && index < 8)) return true
-        }
-        return false
-    }
     
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
@@ -138,7 +122,6 @@ export function Rooms() {
                         state={r}
                         page={pages[i]}
                         active={activeRoom === i}
-                        clickable={isClickable(i, r)}
                         roomNumber={i}
                         sounds={sounds}
                     />
