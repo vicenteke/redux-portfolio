@@ -67,6 +67,7 @@ export function Rooms() {
         bellSound, correctSound, showerSound,
         laptopSound, cashSound, phoneSound,
         coffeeSound, laserSound, paperSound,
+        moveSound
     ]
     
     useEffect(() => {

@@ -42,13 +42,14 @@ export function Room({ active, state, page, roomNumber, sounds }: RoomProps) {
         event.preventDefault()
         const target = event.currentTarget
         if (target.id === roomId) {
-            if (soundEnabled)
-                sounds[roomNumber]({ id: 'default' })
-
             dispatch(setActive(roomNumber))
             if (state === 'notSeen') {
+                if (soundEnabled)
+                    sounds[sounds.length - 1]()   // Play move sound
                 dispatch(incrementSeen())
             } else {
+                if (soundEnabled)
+                    sounds[roomNumber]({ id: 'default' })
                 dispatch(setRoomAsVisited(roomNumber))
                 dispatch(incrementVisited())
                 navigate(`/${page}`)
