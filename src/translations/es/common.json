@@ -1,0 +1,156 @@
+{
+    "talkbox": {
+        "reception": "Bienvenido(a) a mi portfolio! Utiliza al cursor o a las teclas de flechas para navegar por las salas y presiona Enter para acceder en una de ellas.\n\nAquí en la recepción usted encuentra ayuda e instrucciones de uso.",
+        "meetingRoom": "He hecho un breve resumen de mi experiencia profesional, presentando también las principales tecnologías y responsabilidades incluidas.",
+        "bathroom": "¡Ojo, no hay nada para usted aquí! Mire en las demás habitaciones.",
+        "office": "Les traje algunos proyectos que hice aparte del trabajo. Es así que se divierten muchos desarrolladores por la noche.",
+        "store": "¡Vayámonos de compras!\n¿Qué tal una nueva apariencia?",
+        "contact": "Al parecer usted se ha interesado, ¡genial!\n\nAquí están mis contactos para que podamos hablar.",
+        "coffee": "¿Qué tal si nos conocemos un poco mejor?\n\nMe encantaría compartir contigo algunas cosas que hago en mi tiempo libre.",
+        "lab": "Todavía estamos realizando algunos experimentos.\n\nSi fuera tú, seguiría explorando otros espacios...",
+        "library": "Aquí hay información sobre mi formación académica."
+    },
+    "rooms": {
+        "reception": "Recepción",
+        "meetingRoom": "Sala de Reuniones",
+        "bathroom": "Baño",
+        "office": "Oficina",
+        "store": "Tienda",
+        "contact": "Contacto",
+        "coffee": "Cafetería",
+        "lab": "Laboratorio",
+        "library": "Biblioteca"
+    },
+    "others": {
+        "home": "Home",
+        "help": "Ayuda",
+        "contact": "Contacto",
+        "return": "Volver",
+        "now": "Hoy",
+        "or": "o",
+        "phone": "Teléfono",
+        "language": "Lenguaje",
+        "cancel": "Cancelar",
+        "reset": {
+            "title": "¿Reiniciar progreso?",
+            "body": "¿Está cierto que quiere reiniciar todo su progreso? Todos los datos serán borrados, incluyendo monedas y avatares.",
+            "confirm": "Sí, reiniciar progreso"
+        }
+    },
+    "store": {
+        "casual": "Casual",
+        "formal": "Formal",
+        "bassist": "Bajista",
+        "astronaut": "Astronauta",
+        "content1": "Oye, si usted llegó hasta aquí, entonces está disfrutando del portfolio, ¡gracias! Aquí puede comprar nuevos avatares con las monedas ganadas. ¡Sigue visitando las otras habitaciones para conseguirlos todos!"
+    },
+    "faq": {
+        "question1": {
+            "title": "¿Qué es eso?",
+            "content": "Eso es un portfolio en forma de juego. Cada habitación presentará una información distinta y usted irá a colectar monedas mientras las explora. El intento es que sea al menos un poco más divertido para usted, frente a un currículum en Times New Roman."
+        },
+        "question2": {
+            "title": "¿A quién se destina?",
+            "content": "En general, a cualquiera interesado en portfolios. Esto incluye: clientes, contratistas, reclutadores y cualquier persona que sea curiosa."
+        },
+        "question3": {
+            "title": "¿Qué voy a encontrar aquí?",
+            "content": "Esencialmente, este es un portafolio, por lo que encontrará proyectos que he realizado, experiencia laboral, conocimiento técnico y más. Me tomé la libertad de agregar algunas cosas más. Para descubrirlo, simplemente, explore cada habitación mientras recolecta monedas."
+        },
+        "question4": {
+            "title": "¿Cómo usarlo?",
+            "content": "Si tiene un teclado, use las teclas de flecha para navegar, presione Enter para visitar una habitación y Esc para regresar a Home. Alternativamente, haga clic en habitaciones y enlaces para hacer lo mismo. La versión móvil imita el ordenador en el sentido de que necesitas \"moverse\" a través de las habitaciones, en lugar de \"saltar\" a la última."
+        },
+        "question5": {
+            "title": "¿Por qué es esto un juego?",
+            "content": "Esto se debe a que parece tedioso leer portfolios que son solo \"informativos\", como un currículum. Además, para mí fue como un estudio, ya que pude aprender y practicar algunas tecnologías nuevas."
+        },
+        "question6": {
+            "title": "¿Quién lo ha hecho?",
+            "content": "Un placer, mi nombre es Vicente Knihs Erbs. Soy un desarrollador de software full-stack. Puedes encontrarme en ",
+            "mailIs": ", my email es ",
+            "phone": " o llámame en +55 (47) 99627-9577 (Whatsapp también). ¡Charlemos!"
+        }
+    },
+    "projects": {
+        "portfolio": {
+            "name": "Game Portfolio",
+            "skills": "JavaScript, ReactJS, Redux, SASS, Material UI",
+            "content": "De hecho, <i>Game Portfolio</i> es esa página, como puedes imaginar. Es esencialmente un proyecto front-end, sin back-end, que me ayudó a profundizar mis conocimientos en JavaScript, React y Redux. También se desarrolló sobre un framework llamado Material UI: una implementación de las pautas del Material Design de Google."
+        },
+        "airQuality": {
+            "name": "Sistema de Mapeamento de la Calidad del Aire",
+            "skills": "IoT, C/C++, sistemas embebidos, microcontroladores",
+            "content": "Proyecto personal que adquiere datos de la calidad del aire y los envía a una <strong>aplicación Android</strong> mediante un microcontrolador y un módulo Bluetooth. Era realmente un sistema completo, comenzando desde la electrónica y el hardware mecánico hasta una aplicación móvil y almacenando los datos en la nube. La aplicación también controla la frecuencia de adquisición de datos, los almacena en una <strong>base de datos Firebase NoSQL en la nube</strong> y muestra datos de calidad en una vista de Google Maps. El sistema era completamente móvil, por lo que era posible adjuntar su recipiente impreso en 3D a un vehículo y mapear la calidad del aire de una determinada región. Este proyecto originó un artículo publicado en el <i>II Congreso Brasileño Interdisciplinario de Ciencia y Tecnología</i>."
+        },
+        "loraLisha": {
+            "name": "LoRa Mesh",
+            "skills": "IoT, C/C++, sistemas embebidos, hardware design",
+            "content": "Pesquisa realizada en el Laboratorio Integrado de Software y Hardware (LISHA) de la UFSC con el objetivo de integrar un módulo de LoRa Mesh al microcontrolador y al sistema operativo desarrollado en el propio laboratorio. LoRa es un protocolo de red de comunicación centrado en IoT con un largo alcance y bajo consumo de energía. <i>Mesh</i> indica la topología adoptada por este módulo, que no es una topología habitual para LoRa. Terminé desarrollando abstracciones en C/C++ y una placa de circuito impreso (PCB) para la integración de este módulo."
+        },
+        "thinkTank": {
+            "name": "Think Tank",
+            "skills": "Soft Skills, Liderazgo, Design Thinking, Teoría U",
+            "content": "Es un proyecto llevado a cabo por la ONG <i>Projeto Resgate</i>, donde líderes de diferentes organizaciones y estudiantes universitarios desarrollan habilidades blandas aplicando Design Thinking y Teoría U para resolver problemas reales. Primero participé como estudiante, luego comencé a ayudar a los creadores del proyecto en la organización y formación de los líderes. Obtenga más información sobre el proyecto Think Tank: "
+        },
+        "kimak": {
+            "name": "Website Kimak",
+            "skills": "PHP, MySQL, Bootstrap, JQuery, desarrollo web (HTML, CSS y JS)",
+            "content": "Este fue mi primer proyecto CMS real, desarrollado usando HTML, CSS, JavaScript, PHP, MySQL, Bootstrap y jQuery. Lo puede encontrar en "
+        }
+    },
+    "work": {
+        "pollux": {
+            "job": "Desarrollador de Software",
+            "company": "Pollux, Part of Accenture - Joinville, Brasil",
+            "content": "Desarrollador Full-Stack, no solo con responsabilidades de back-end y front-end, sino que también se ocupa de IIoT (Internet industrial de las cosas) con RaspberryPi's y configuración de servidores. La organización se centra en la robótica y la automatización como parte de los servicios Indusrty X de Accenture. Las tecnologías adoptadas básicamente incluían Python, bases de datos relacionales SQL (PostgreSQL y SQLite), Bootstrap y jQuery. Además, se integraron varios hardwares y otras tecnologías como ReactJS, FastAPI, Docker y Docker-Compose se convirtieron en parte del framework."
+        },
+        "lisha": {
+            "job": "Iniciación Científica (pesquisa)",
+            "company": "Laboratorio Integrado de Software y Hardware (LISHA) UFSC - Joinville, Brasil",
+            "content": "Pesquisa en sistemas embebidos utilizando microcontroladores. La primera investigación se centró en las memorias DDR para un flujo intenso de datos provenientes de microcontroladores, luego pasó a IoT con la red LoRa implementada en una topología de malla. El código fue escrito en C y C++, ya que era un sistema embebido."
+        }
+    },
+    "coffee": {
+        "content1": "¡Me alegro de que estés interesado en mi portfolio! A veces siento que los portfolios son demasiado impersonales y fríos, como un currículum en Times New Roman. Si lo desea, me gustaría compartir con usted un poco de lo que hago además de programar, cosas que me hacen sentir como yo mismo.",
+        "content2": "Primeramente, la música ha sido parte de mi vida desde que era un niño. Hoy, soy bajista en lo que yo clasificaría como una banda de Indie Rock. Se llama <i>Pétala Quinto</i> y es autoral. Puedes encontrarla en",
+        "content3": "o donde quieras - otras plataformas de streaming o incluso en",
+        "content4": "Es importante para mí. Además, me ha dado varias oportunidades, como de voluntariado.",
+        "volunteering": "Voluntariado",
+        "content5": "Por suerte, pude participar en algunos proyectos de voluntariado. Ahora, hay dos en los que participo: Escola dos Anjos y Movimento Campista.",
+        "content6": "<strong>Escola dos Anjos</strong>, trducido como Escuela de Ángeles, es un proyecto social donde niños necesitados de 8 a 12 años disfrutan de un día jugando y aprendiendo “cómo se comporta un ángel en la Tierra”. Desde 2018, he participado principalmente en interacciones musicales en mi ciudad natal. Puedes saber más sobre Escola dos Anjos en Instagram:",
+        "content7": "<strong>Movimento Campista</strong> abarca campamentos de retiro católico separados por grupos de edad, donde he participado en la parte musical de los retiros con niños y jóvenes desde 2017."
+    },
+    "contact": {
+        "content1": "Ya que está aquí, asumo que le gustaría poner en contacto para hablar o algo así. Además, ya he hablado demasiado sobre mí. ¿Y usted?",
+        "content2": "Aquí hay algunas posibilidades para ponerse en contacto conmigo.",
+        "content3": "No dude en ponerse en contacto conmigo en cualquier momento, ¡siempre estoy abierto para chatear!"
+    },
+    "library": {
+        "content1": "Por sorprendente que parezca, me gradué en <strong>Ingeniería Mecatrónica</strong> por la Universidade Federal de Santa Catarina (UFSC), con honores académicos. UFSC está entre las mejores universidades de América Latina, si tienes curiosidad puedes conocer más en",
+        "ufscSite": "https://en.ufsc.br/",
+        "content2": "Por lo general, pocos saben qué es la mecatrónica, así que lo explicaré brevemente. Es algo como mecánica + electrónica + computación. El enfoque principal para nosotros estaba en los <strong>sistemas embebidos</strong>, que incluyen <strong>microcontroladores, sistemas operativos en tiempo real</strong>, algo de <strong>electrónica</strong> y poca <strong>mecánica</strong>.",
+        "content3": "Esto crea una base sobre una variedad de temas, y esa es la razón principal por la que opté por la mecatrónica. Aprendes sobre: Internet de las Cosas (IoT), Inteligencia Artificial (IA), PLC, FPGAs, microcontroladores, sistemas operativos, redes, control, electrónica de potencia, motores, materiales, estructuras, entre otros.",
+        "content4": "Por supuesto, descubrí que \"lo mío\" es el software. No mecánica y no tanto electrónica. <strong>Aprendí a programar incluso antes de decidir qué estudiar</strong>, pero fue durante esos años cuando supe que me convertiría en <strong>ingeniero de software</strong>.",
+        "content5": "Ahora que sabes un poco más sobre lo que estudié formalmente, ¿por qué no sigues explorando otras habitaciones?"
+    },
+    "meetingRoom": {
+        "content1": "Aquí hay una lista de mis experiencias profesionales y una descripción de lo que solía hacer en cada una."
+    },
+    "office": {
+        "content1": "He aquí una recopilación de los proyectos que he realizado en los últimos años. Con ellos pude aprender hard y soft skills que, aunque no están directamente relacionadas, son importantes para lo que hago en software."
+    },
+    "reception": {
+        "content1": "¡Bienvenido(a) a mi portfolio! Creo que a veces puede ser un poco aburrido leer los currículums de los desarrolladores y cosas así, entonces decidí crear una experiencia diferente para usted. Por eso tiene este formato de juego.",
+        "content2": "Cómo usar:",
+        "content3": "Para moverse entre las habitaciones, haga clic en ellas o use las teclas de flecha de su teclado;",
+        "content4": "Para ingresar a una habitación, puede hacer doble clic o presionar Enter;",
+        "content5": "Para salir de una habitación, presione Esc o use los enlaces en pantalla.",
+        "content6": "Estaré aquí para ayudarte como un avatar. Puedes volver a esta habitación en cualquier momento, así encontrarás ayuda. Espero que disfrutes de este \"portfolio de juegos\" tanto como yo lo hice mientras trabajaba en él. ¡Que lo pases bien!"
+    },
+    "flag": {
+        "altEn": "Bandera de los EEUU",
+        "altEs": "Bandera da España",
+        "altPt": "Bandera de Brasil"
+    }
+}

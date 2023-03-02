@@ -1,0 +1,135 @@
+$warning-light-color: #ff9800
+
+// Scrollbar
+$scroll-foreground-color: linear-gradient(-30deg, #0288d1 20%, #00c6fd 90%)
+$scroll-background-color: transparent
+$scroll-size: 8px
+
+::-webkit-scrollbar
+    width:  $scroll-size
+
+::-webkit-scrollbar-thumb
+    background: $scroll-foreground-color
+    border-radius: 16px
+
+::-webkit-scrollbar-track
+    background: $scroll-background-color
+    position: fixed
+    right: 0
+    height: 100vh
+    top: 0
+    z-index: 100
+    margin-left: -$scroll-size
+// End Scrollbar
+
+body
+    margin: 0
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    @media (max-width: 900px)
+        padding-bottom: calc(30vh - 24px)
+
+    // For Internet Explorer
+    scrollbar-face-color: $scroll-foreground-color
+    scrollbar-track-color: $scroll-background-color
+
+.content-box
+    margin: auto
+    max-width: 1536px
+    padding: 0 16px
+    @media (min-width: 600px)
+        padding: 0 24px
+
+.menu-link
+    color: white
+    text-decoration: none
+    font-weight: bold
+
+.skeleton-room
+    height: 28vh !important
+
+.skeleton-avatar
+    width: 100% !important
+    height: 200px !important
+
+    @media (min-width: 600px)
+        height:300px !important
+
+.skeleton-talkbox
+    width: 100% !important
+    height: 200px !important
+
+.room-btn
+    @extend .skeleton-room
+    overflow: hidden
+    border-radius: 16px
+    border: 1px solid #ccc
+
+.room-btn-active
+    border: 1px solid $warning-light-color
+
+.room-img
+    display: block
+    margin-left: auto
+    margin-right: auto
+    height: 100%
+
+.avatar-box
+    height: 100%
+    @media (max-width: 900px)
+        position: fixed
+        bottom: 0
+        left: 0
+        margin-bottom: 0
+        width: 100vw
+        z-index: 100
+        max-height: 30vh
+        background: linear-gradient(0deg, white 10%, transparent 100%)
+
+.avatar-image
+    overflow-x: hidden
+    overflow-y: hidden
+
+    img
+        width: 100%
+
+.talkbox-box
+    width: 100%
+    padding: 8px
+    @media (max-width: 900px)
+        height: calc(30vh - 24px)
+        width: 90%
+
+.talkbox
+    white-space: pre-line
+    border-radius: 16px 16px 0
+    border: 2px solid transparent
+    height: 100%
+    padding: 16px
+    overflow-y: auto
+    @media (max-width: 900px)
+        border-radius: 16px 16px 16px 0
+
+.talkbox-active
+    background: white
+    box-shadow: 5px 5px 15px #969696
+
+.nice-gradient
+    background: linear-gradient(-30deg, #0288d1 20%, #00c6fd 90%)
+
+.active-avatar
+    border: 1px solid $warning-light-color
+
+.contacts
+    font-size: 1.3em !important
+
+.flag-button
+    max-width: 100%
+
+.flag-selector
+    box-shadow: 5px 5px 15px #969696
+
+.flag-select
+    height: 1em
+    width: auto
+    margin-right: 1em
