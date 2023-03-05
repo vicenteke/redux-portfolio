@@ -15,7 +15,7 @@ export default function CoffeePage() {
             </Typography><br/>
             <Typography variant="h2" component="h2">Music</Typography><br/>
             <Typography variant="body1" component="p">
-            <div dangerouslySetInnerHTML={{__html: t('coffee.content2')}}></div> <Link href="https://open.spotify.com/artist/4GFANHG6Hljpi1JHKde9hJ?si=rXaj6zFfSnS-SVAHfpozgA" target="_blank" rel="noreferrer" underline="hover">Spotify</Link> {t('others.or')} <Link href="https://www.youtube.com/channel/UCMBGcJA16AGJM-OMk0QYekw" target="_blank" rel="noreferrer" underline="hover">YouTube</Link> {t('coffee.content3')} <Link href="https://www.instagram.com/petalaquinto/" target="_blank" rel="noreferrer" underline="hover">Instagram</Link>.
+            <div dangerouslySetInnerHTML={{__html: t('coffee.content2')}}></div> <Link href="https://petalaquinto.com.br" target="_blank" rel="noreferrer" underline="hover">https://petalaquinto.com.br</Link>{t('others.inPortuguese')}, <Link href="https://open.spotify.com/artist/4GFANHG6Hljpi1JHKde9hJ?si=rXaj6zFfSnS-SVAHfpozgA" target="_blank" rel="noreferrer" underline="hover">Spotify</Link> {t('others.or')} <Link href="https://www.youtube.com/channel/UCMBGcJA16AGJM-OMk0QYekw" target="_blank" rel="noreferrer" underline="hover">YouTube</Link> {t('coffee.content3')} <Link href="https://www.instagram.com/petalaquinto/" target="_blank" rel="noreferrer" underline="hover">Instagram</Link>.
             </Typography><br/>
             <Typography variant="body1" component="p">
                 {t('coffee.content4')}
