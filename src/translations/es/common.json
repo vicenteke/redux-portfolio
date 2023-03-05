@@ -35,7 +35,8 @@
             "title": "¿Reiniciar progreso?",
             "body": "¿Está cierto que quiere reiniciar todo su progreso? Todos los datos serán borrados, incluyendo monedas y avatares.",
             "confirm": "Sí, reiniciar progreso"
-        }
+        },
+        "inPortuguese": " (en portugués brasileño)"
     },
     "store": {
         "casual": "Casual",
@@ -73,6 +74,11 @@
         }
     },
     "projects": {
+        "petalaquinto": {
+            "name": "Website Pétala Quinto",
+            "skills": "JavaScript, ReactJS, SASS, React-Bootstrap",
+            "content": "Si todavía no lo sabe, estoy en una banda llamada Pétala Quinto. Ese proyecto es sobre la página web que he desarrollado con React, SASS y el framework de front-end react-bootstrap. El UI fue bastante inspirado en el Spotify web y el design es completamente responsivo (me pregunto por qué álguien desarrollaría algo que no es responsivo hoy en día). Puede visitarlo en"
+        },
         "portfolio": {
             "name": "Game Portfolio",
             "skills": "JavaScript, ReactJS, Redux, SASS, Material UI",

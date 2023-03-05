@@ -17,6 +17,13 @@ export default function ProjectsTimeline() {
 
     const data = [
         {
+            key: "petalaquinto",
+            name: t('projects.petalaquinto.name'),
+            skills: t('projects.petalaquinto.skills'),
+            date: '2023',
+            content: <><div>{t('projects.petalaquinto.content')} <Link href="https://petalaquinto.com.br" target="_blank" rel="noreferrer" underline="hover" variant="subtitle1">https://petalaquinto.com.br</Link>.</div></>
+        },
+        {
             key: "portfolio",
             name: t('projects.portfolio.name'),
             skills: t('projects.portfolio.skills'),

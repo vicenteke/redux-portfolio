@@ -35,7 +35,8 @@
             "title": "Reset your progress?",
             "body": "Are you sure you want to reset all your progress? All data will be lost, including coins and avatars.",
             "confirm": "Yes, reset my progress"
-        }
+        },
+        "inPortuguese": " (in Brazilian Portuguese)"
     },
     "store": {
         "casual": "Casual",
@@ -73,6 +74,11 @@
         }
     },
     "projects": {
+        "petalaquinto": {
+            "name": "Pétala Quinto's Website",
+            "skills": "JavaScript, ReactJS, SASS, React-Bootstrap",
+            "content": "If you don't know yet, I'm in a band called Pétala Quinto. This project is about the website I have built for it using React, SASS and the react-bootstrap front-end framework. The UI was pretty much inspired on Spotify's web player and the design is fully responsive (I wonder why would anyone develop something that is not responsive nowadays). You can check it at"
+        },
         "portfolio": {
             "name": "Game Portfolio",
             "skills": "JavaScript, ReactJS, Redux, SASS, Material UI",
@@ -113,7 +119,7 @@
     },
     "coffee": {
         "content1": "Hey, I'm glad you are interested in my portfolio! Sometimes I feel that portfolios are too impersonal or cold, like a resumé in Times New Roman. If you want to, I would like to share a little of what I do beyond working and coding - things that make me feel like me.",
-        "content2": "First of all, music has been part of my life since I was a child. Right now, I'm the bassist of what I would classify as an Indie Rock band. It's called <i>Pétala Quinto</i> and we write our own songs. Check it out on",
+        "content2": "First of all, music has been part of my life since I was a child. Right now, I'm the bassist of what I would classify as an Indie Rock band. It's called <i>Pétala Quinto</i> and we write our own songs. Check it out at",
         "content3": "or wherever you want to - other streamings platforms or even on",
         "content4": "It's something important for me. Moreover, it has given me several opportunities, for instance for volunteering.",
         "volunteering": "Volunteering",
