@@ -52,7 +52,7 @@ export default function FAQ() {
                         <Typography>{accordion.title}</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography>
+                        <Typography sx={{ fontStyle: 'italic' }}>
                             {accordion.content}
                         </Typography>
                     </AccordionDetails>

@@ -102,19 +102,19 @@
         "kimak": {
             "name": "Website Kimak",
             "skills": "PHP, MySQL, Bootstrap, JQuery, desarrollo web (HTML, CSS y JS)",
-            "content": "Este fue mi primer proyecto CMS real, desarrollado usando HTML, CSS, JavaScript, PHP, MySQL, Bootstrap y jQuery. Lo puede encontrar en "
+            "content": "Este fue mi primer proyecto CMS real, desarrollado usando HTML, CSS, JavaScript, PHP, MySQL, Bootstrap y jQuery. El sitio ya no está disponible."
         }
     },
     "work": {
         "pollux": {
-            "job": "Desarrollador de Software",
+            "job": "Full-Stack Software Developer",
             "company": "Pollux, Part of Accenture - Joinville, Brasil",
             "content": "Desarrollador Full-Stack, no solo con responsabilidades de back-end y front-end, sino que también se ocupa de IIoT (Internet industrial de las cosas) con RaspberryPi's y configuración de servidores. La organización se centra en la robótica y la automatización como parte de los servicios Indusrty X de Accenture. Las tecnologías adoptadas básicamente incluían Python, bases de datos relacionales SQL (PostgreSQL y SQLite), Bootstrap y jQuery. Además, se integraron varios hardwares y otras tecnologías como ReactJS, FastAPI, Docker y Docker-Compose se convirtieron en parte del framework."
         },
-        "lisha": {
-            "job": "Iniciación Científica (pesquisa)",
-            "company": "Laboratorio Integrado de Software y Hardware (LISHA) UFSC - Joinville, Brasil",
-            "content": "Pesquisa en sistemas embebidos utilizando microcontroladores. La primera investigación se centró en las memorias DDR para un flujo intenso de datos provenientes de microcontroladores, luego pasó a IoT con la red LoRa implementada en una topología de malla. El código fue escrito en C y C++, ya que era un sistema embebido."
+        "redsoft": {
+            "job": "Full-Stack Software Developer",
+            "company": "RedSoft A.I. - Remoto",
+            "content": "Startup enfocada en traer la revolución 4.0 para la industria de la carne. Es una empresa derivada de Pix Force - galardonada mejor startup de visión computacional en Brasil por 100 Open Startups - y iBeef, especialista en la industria cárnica. Trabajo como Desarrolador Full-Stack, utilizando principalmente Python, Flask, React y TypeScript. Otras tecnologías incluyen algunos servicios cloud de AWS, Docker y Docker Compose para contenerización y herramientas Azure DevOps. Tuve la oportunidad de participar en los primeros pasos de la compañía, y ahora nuestro sistema ya fue implementado en importantes compañías del sector."
         }
     },
     "coffee": {
@@ -135,10 +135,11 @@
     "library": {
         "content1": "Por sorprendente que parezca, me gradué en <strong>Ingeniería Mecatrónica</strong> por la Universidade Federal de Santa Catarina (UFSC), con honores académicos. UFSC está entre las mejores universidades de América Latina, si tienes curiosidad puedes conocer más en",
         "ufscSite": "https://en.ufsc.br/",
-        "content2": "Por lo general, pocos saben qué es la mecatrónica, así que lo explicaré brevemente. Es algo como mecánica + electrónica + computación. El enfoque principal para nosotros estaba en los <strong>sistemas embebidos</strong>, que incluyen <strong>microcontroladores, sistemas operativos en tiempo real</strong>, algo de <strong>electrónica</strong> y poca <strong>mecánica</strong>.",
+        "content2": "Por lo general, pocos saben qué es la mecatrónica, así que lo explicaré brevemente. Es algo como mecánica + electrónica + computación. El enfoque principal para nosotros estaba en los <strong>sistemas embebidos</strong>, que incluyen microcontroladores, sistemas operativos en tiempo real, algo de electrónica y poca mecánica.",
         "content3": "Esto crea una base sobre una variedad de temas, y esa es la razón principal por la que opté por la mecatrónica. Aprendes sobre: Internet de las Cosas (IoT), Inteligencia Artificial (IA), PLC, FPGAs, microcontroladores, sistemas operativos, redes, control, electrónica de potencia, motores, materiales, estructuras, entre otros.",
         "content4": "Por supuesto, descubrí que \"lo mío\" es el software. No mecánica y no tanto electrónica. <strong>Aprendí a programar incluso antes de decidir qué estudiar</strong>, pero fue durante esos años cuando supe que me convertiría en <strong>ingeniero de software</strong>.",
-        "content5": "Ahora que sabes un poco más sobre lo que estudié formalmente, ¿por qué no sigues explorando otras habitaciones?"
+        "content5": "Ahora que sabes un poco más sobre lo que estudié formalmente, ¿por qué no sigues explorando otras habitaciones?",
+        "omscs1": "Actualmente, estoy cursando un <strong>Máster en Ciencias de la Computación en el Georgia Institute of Technology</strong>. Se trata de un programa disruptivo llamado <i>Online Master in Computer Science</i> (OMSCS), en una de las mejores universidades del mundo, especialmente en ingeniería y ciencias de la computación. Más información en"
     },
     "meetingRoom": {
         "content1": "Aquí hay una lista de mis experiencias profesionales y una descripción de lo que solía hacer en cada una."

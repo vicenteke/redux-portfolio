@@ -11,16 +11,27 @@ export default function LibraryPage() {
             <ReturnButton />
             <br/><br/><Typography variant="h1" component="h1">{t('rooms.library')}</Typography><br/>
             <Typography variant="body1" component="p">
-            <div dangerouslySetInnerHTML={{__html: t('library.content1')}}></div> <Link href={String(t('library.ufscSite'))} target="_blank" rel="noreferrer" underline="hover">{t('library.ufscSite')}</Link>.
+                <span dangerouslySetInnerHTML={{__html: t('library.omscs1')}} />
+                {' '}
+                <Link href="https://omscs.gatech.edu/" target="_blank" rel="noreferrer" underline="hover">
+                    https://omscs.gatech.edu/
+                </Link>.
             </Typography><br/>
             <Typography variant="body1" component="p">
-            <div dangerouslySetInnerHTML={{__html: t('library.content2')}}></div>
+                <span dangerouslySetInnerHTML={{__html: t('library.content1')}} />
+                {' '}
+                <Link href={String(t('library.ufscSite'))} target="_blank" rel="noreferrer" underline="hover">
+                    {t('library.ufscSite')}
+                </Link>.
             </Typography><br/>
             <Typography variant="body1" component="p">
-            {t('library.content3')}
+                <span dangerouslySetInnerHTML={{__html: t('library.content2')}} />
             </Typography><br/>
             <Typography variant="body1" component="p">
-            <div dangerouslySetInnerHTML={{__html: t('library.content4')}}></div>
+                {t('library.content3')}
+            </Typography><br/>
+            <Typography variant="body1" component="p">
+                <span dangerouslySetInnerHTML={{__html: t('library.content4')}} />
             </Typography><br/>
             <Typography variant="body1" component="p">
                 {t('library.content5')}

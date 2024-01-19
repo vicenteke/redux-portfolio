@@ -14,19 +14,19 @@ export default function WorkTimeline() {
     const [t, i18n] = useTranslation('common');
     const data = [
         {
+            key: "redsoft_dev",
+            job: t('work.redsoft.job'),
+            company: t('work.redsoft.company'),
+            date: `2023 - ${t('others.now')}`,
+            content: <>{t('work.redsoft.content')}</>
+        },
+        {
             key: "pollux_dev",
             job: t('work.pollux.job'),
             company: t('work.pollux.company'),
-            date: `2021 - ${t('others.now')}`,
+            date: `2021 - 2023`,
             content: <>{t('work.pollux.content')}</>
         },
-        {
-            key: "ufsc_lisha",
-            job: t('work.lisha.job'),
-            company: t('work.lisha.company'),
-            date: '2019 - 2020',
-            content: <>{t('work.lisha.content')}</>
-        }
     ]
     return (
         <React.Fragment>

@@ -44,11 +44,11 @@ export default function ShopCard({ name, cost, id, image, hidden, margin,
               onClick={() => onClick()}>
         <CardActionArea>
             <CardMedia
-            sx={{ paddingTop: margin + 'px'}}
-            className="avatar-image"
-            component="img"
-            image={is_available ? image : hidden}
-            alt={is_available ? name : "Hidden avatar"}
+                sx={{ paddingTop: margin + 'px'}}
+                className="avatar-image"
+                component="img"
+                image={is_available ? image : hidden}
+                alt={is_available ? name : "Hidden avatar"}
             />
             {is_available ?
             <CardContent>

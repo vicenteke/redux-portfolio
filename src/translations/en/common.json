@@ -102,19 +102,19 @@
         "kimak": {
             "name": "Kimak's Website",
             "skills": "PHP, MySQL, Bootstrap, JQuery, web development (HTML, CSS and JS)",
-            "content": "This was my first real-life CMS website project, developed using HTML, CSS, JavaScript, PHP, MySQL, Bootstrap and JQuery. You can find it at "
+            "content": "This was my first real-life CMS website project, developed using HTML, CSS, JavaScript, PHP, MySQL, Bootstrap and JQuery. The site is not available anymore."
         }
     },
     "work": {
         "pollux": {
-            "job": "Software Developer",
+            "job": "Full-Stack Software Developer",
             "company": "Pollux, Part of Accenture - Joinville, Brazil",
             "content": "Full-Stack developer, not only with back-end and front-end responsibilities, but also handling IIoT (Industrial Internet of Things) with RaspberryPi's and server setups. The company is focused on robotics and automation as part of Accenture's Industry X services. The stack is basically composed of Python, relational databases (PostgreSQL and SQLite), Bootstrap and jQuery. Moreover, several hardwares were integrated and other technologies such as ReactJS, FastAPI, Docker and Docker-Compose joined the stack."
         },
-        "lisha": {
-            "job": "Student Researcher",
-            "company": "Software/Hardware Integration Lab (LISHA) UFSC - Joinville, Brazil",
-            "content": "Research on embedded systems using microcontrollers. The first research was concerned with DDR memories for highly intense data flux from microcontrollers, then moved to IoT with a LoRa network implemented as a mesh topology. The code was made in C and C++, as it was an embedded environment."
+        "redsoft": {
+            "job": "Full-Stack Software Developer",
+            "company": "RedSoft A.I. - Remote",
+            "content": "Startup focused on bringing the 4.0 revolution to the meat industry. It is a spin-off from Pix Force - awarded as the greatest computing vision startup in Brazil by 100 Open Startups - and iBeef, specialized in the meat industry. I work as a Full-Stack Developer, mostly working with Python, Flask, React and TypeScript. Other technologies include some AWS cloud services, Docker and Docker Compose for containerization and Azure DevOps tools. I had the opportunity to join the company in its first steps, and now our system has been implemented in relevant companies in this sector, which led me to take ownership over its development."
         }
     },
     "coffee": {
@@ -135,10 +135,11 @@
     "library": {
         "content1": "Surprisingly enough, I have a <strong>Bachelor's degree in Mechatronics Engineering</strong> from Universidade Federal de Santa Catarina (UFSC), with Academic Honors. UFSC is among the best LATAM universities, if you're a curious person you can learn more at",
         "ufscSite": "https://en.ufsc.br/",
-        "content2": "Usually, no one knows what mechatronics is about, so let me briefly explain it. It is something like mechanics + electronics + computing. The main focus for us was on <strong>embedded systems</strong>, which include <strong>microcontrollers, real-time operating systems,</strong> some <strong>electronics</strong> and not so much <strong>mechanics</strong>.",
+        "content2": "Usually, no one knows what mechatronics is about, so let me briefly explain it. It is something like mechanics + electronics + computing. The main focus for us was on <strong>embedded systems</strong>, which include microcontrollers, real-time operating systems, some electronics and not so much mechanics.",
         "content3": "That creates a foundation over a broad set of subjects - and that's the main reason I've chosen mechatronics. We learn about: Internet of Things (IoT), Artificial Intelligence (AI), PLC, FPGAs, microcontrollers, operating systems, networking, control, power electronics, motors, materials, structures, to name a few.",
         "content4": "For sure, I've found out that \"my thing\" is software. No mechanics and not that much electronics. <strong>I had learnt to code before choosing to pursue any degree</strong>, but it was during those years that I knew I would become a <strong>software engineer</strong>.",
-        "content5": "Now that you know about what I've studied formally, why not continuing to explore other rooms?"
+        "content5": "Now that you know about what I've studied formally, why not continuing to explore other rooms?",
+        "omscs1": "I am currently pursuing a <strong>Master's degree in Computer Science at Georgia Institute of Technology</strong>. It is a disruptive program named <i>Online Master in Computer Science</i> (OMSCS), in one of the best universities in the world, especially in engineering and computer science. More information at"
     },
     "meetingRoom": {
         "content1": "Here's a a list of my work experiences and a description of what I used to do during each of them."

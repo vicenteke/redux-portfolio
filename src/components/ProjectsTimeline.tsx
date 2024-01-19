@@ -21,42 +21,53 @@ export default function ProjectsTimeline() {
             name: t('projects.petalaquinto.name'),
             skills: t('projects.petalaquinto.skills'),
             date: '2023',
-            content: <><div>{t('projects.petalaquinto.content')} <Link href="https://petalaquinto.com.br" target="_blank" rel="noreferrer" underline="hover" variant="subtitle1">https://petalaquinto.com.br</Link>.</div></>
+            content: <div>
+                {t('projects.petalaquinto.content')}{' '}
+                <Link href="https://petalaquinto.com.br" target="_blank" rel="noreferrer" underline="hover" variant="subtitle1">
+                    https://petalaquinto.com.br
+                </Link>.
+            </div>
         },
         {
             key: "portfolio",
             name: t('projects.portfolio.name'),
             skills: t('projects.portfolio.skills'),
             date: '2022',
-            content: <div dangerouslySetInnerHTML={{__html: t('projects.portfolio.content')}}></div>
+            content: <span dangerouslySetInnerHTML={{__html: t('projects.portfolio.content')}} />
         },
         {
             key: "air_quality",
             name: t('projects.airQuality.name'),
             skills: t('projects.airQuality.skills'),
             date: '2021',
-            content: <div dangerouslySetInnerHTML={{__html: t('projects.airQuality.content')}}></div>
+            content: <span dangerouslySetInnerHTML={{__html: t('projects.airQuality.content')}} />
         },
         {
             key: "lora_lisha",
             name: t('projects.loraLisha.name'),
             skills: t('projects.loraLisha.skills'),
             date: '2020',
-            content: <div dangerouslySetInnerHTML={{__html: t('projects.loraLisha.content')}}></div>
+            content: <span dangerouslySetInnerHTML={{__html: t('projects.loraLisha.content')}} />
         },
         {
             key: "think_tank",
             name: t('projects.thinkTank.name'),
             skills: t('projects.thinkTank.skills'),
             date: '2018 - 2019',
-            content: <><div dangerouslySetInnerHTML={{__html: t('projects.thinkTank.content')}}></div><Link href="https://www.projetoresgate.org.br/en/thinktankprojetoresgate" target="_blank" rel="noreferrer" underline="hover">{'https://www.projetoresgate.org.br/en/thinktankprojetoresgate'}</Link>.</>
+            content: <>
+                <span dangerouslySetInnerHTML={{__html: t('projects.thinkTank.content')}} />
+                {' '}
+                <Link href="https://www.projetoresgate.org.br/en/thinktankprojetoresgate" target="_blank" rel="noreferrer" underline="hover">
+                    https://www.projetoresgate.org.br/en/thinktankprojetoresgate
+                </Link>.
+            </>
         },
         {
             key: "kimak",
             name: t('projects.kimak.name'),
             skills: t('projects.kimak.skills'),
             date: '2020',
-            content: <><div dangerouslySetInnerHTML={{__html: t('projects.kimak.content')}}></div><Link href="https://www.kimak.com.br" target="_blank" rel="noreferrer" underline="hover">{'https://www.kimak.com.br'}</Link>.</>
+            content: <span dangerouslySetInnerHTML={{__html: t('projects.kimak.content')}} />
         }
     ]
 
