@@ -74,6 +74,11 @@
         }
     },
     "projects": {
+        "worldhousingapi": {
+            "name": "World Housing API",
+            "skills": "Django REST Framework, REST APIs",
+            "content": "Proyecto open-source que trae los datos de vivienda para cada país en cuanto al precio del metro cuadrado y variaciones mensuales. Está hecho con Django REST Framework y está disponible públicamente en Github:"
+        },
         "petalaquinto": {
             "name": "Website Pétala Quinto",
             "skills": "JavaScript, ReactJS, SASS, React-Bootstrap",
@@ -130,7 +135,7 @@
     "contact": {
         "content1": "Ya que está aquí, asumo que le gustaría poner en contacto para hablar o algo así. Además, ya he hablado demasiado sobre mí. ¿Y usted?",
         "content2": "Aquí hay algunas posibilidades para ponerse en contacto conmigo.",
-        "content3": "No dude en ponerse en contacto conmigo en cualquier momento, ¡siempre estoy abierto para chatear!"
+        "content3": "No dude en ponerse en contacto conmigo en cualquier momento, ¡siempre estoy disponible para chatear!"
     },
     "library": {
         "content1": "Por sorprendente que parezca, me gradué en <strong>Ingeniería Mecatrónica</strong> por la Universidade Federal de Santa Catarina (UFSC), con honores académicos. UFSC está entre las mejores universidades de América Latina, si tienes curiosidad puedes conocer más en",

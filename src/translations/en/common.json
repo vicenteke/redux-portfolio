@@ -74,6 +74,11 @@
         }
     },
     "projects": {
+        "worldhousingapi": {
+            "name": "World Housing API",
+            "skills": "Django REST Framework, REST APIs",
+            "content": "An open-source API that provides housing data for each country in terms of monthly variation and square-meter pricing. It uses the Django REST Framework and is publicly available on Github:"
+        },
         "petalaquinto": {
             "name": "Pétala Quinto's Website",
             "skills": "JavaScript, ReactJS, SASS, React-Bootstrap",

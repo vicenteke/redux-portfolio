@@ -6,6 +6,7 @@ import Link from '@mui/material/Link';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import ReturnButton from '../components/ReturnButton'
 import { Avatar } from '../features/avatar/Avatar';
@@ -30,7 +31,7 @@ export default function ContactPage() {
             <Typography variant="body1" component="p">
                 {t('contact.content1')}
                 <br/>
-                {t('contact.content2')}
+                {t('contact.content2')} {t('contact.content3')}
             </Typography><br/>
             <Typography variant="body1" component="p" className="contacts">
                 <WhatsAppIcon color="success"/> {t('others.phone')}: <Link href="https://api.whatsapp.com/send?phone=5547996279577" target="_blank" rel="noreferrer" underline="hover">+55 (47) 99627-9577</Link>
@@ -39,9 +40,8 @@ export default function ContactPage() {
                 <br/>
                 <LinkedInIcon color="primary"/> LinkedIn: <Link href="https://www.linkedin.com/in/vicente-knihs-erbs-335b95209/" target="_blank" rel="noreferrer" underline="hover">Vicente Knihs Erbs</Link>
                 <br/>
-            </Typography><br/>
-            <Typography variant="body1" component="p">
-                {t('contact.content3')}
+                <GitHubIcon /> GitHub: <Link href="https://github.com/vicenteke" target="_blank" rel="noreferrer" underline="hover">https://github.com/vicenteke</Link>
+                <br/>
             </Typography><br/>
             <Avatar talkbox={false} />
         </>

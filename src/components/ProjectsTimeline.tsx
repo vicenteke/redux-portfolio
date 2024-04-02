@@ -17,6 +17,22 @@ export default function ProjectsTimeline() {
 
     const data = [
         {
+            key: "worldhousingapi",
+            name: t('projects.worldhousingapi.name'),
+            skills: t('projects.worldhousingapi.skills'),
+            date: '2024',
+            content: <div>
+                {t('projects.worldhousingapi.content')}{' '}
+                <Link href="https://github.com/vicenteke/world-housing-api"
+                        target="_blank"
+                        rel="noreferrer"
+                        underline="hover"
+                        variant="subtitle1">
+                    https://github.com/vicenteke/world-housing-api
+                </Link>.
+            </div>
+        },
+        {
             key: "petalaquinto",
             name: t('projects.petalaquinto.name'),
             skills: t('projects.petalaquinto.skills'),
