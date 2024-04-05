@@ -76,8 +76,8 @@
     "projects": {
         "worldhousingapi": {
             "name": "World Housing API",
-            "skills": "Django REST Framework, REST APIs",
-            "content": "Projeto open-source que traz os dados de moradia para cada país em termos de valor do metro quadrado e variações mensais. É feito com Django REST Framework e está disponível publicamente no Github:"
+            "skills": "Django REST Framework, REST APIs, Next,js, Chakra UI",
+            "content": "Projeto open-source que traz os dados de moradia para cada país em termos de valor do metro quadrado e variações mensais. Disponível publicamente no Github:"
         },
         "petalaquinto": {
             "name": "Website Pétala Quinto",

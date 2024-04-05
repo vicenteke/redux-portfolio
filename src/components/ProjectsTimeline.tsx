@@ -27,7 +27,8 @@ export default function ProjectsTimeline() {
                         target="_blank"
                         rel="noreferrer"
                         underline="hover"
-                        variant="subtitle1">
+                        variant="subtitle1"
+                        whiteSpace='nowrap'>
                     https://github.com/vicenteke/world-housing-api
                 </Link>.
             </div>
