@@ -18,14 +18,16 @@ export default function WorkTimeline() {
             job: t('work.redsoft.job'),
             company: t('work.redsoft.company'),
             date: `2023 - ${t('others.now')}`,
-            content: <>{t('work.redsoft.content')}</>
+            content: <>{t('work.redsoft.content')}</>,
+            image: '/resources/img/pictures/redsoft.png',
         },
         {
             key: "pollux_dev",
             job: t('work.pollux.job'),
             company: t('work.pollux.company'),
             date: `2021 - 2023`,
-            content: <>{t('work.pollux.content')}</>
+            content: <>{t('work.pollux.content')}</>,
+            image: '/resources/img/pictures/pollux.png',
         },
     ]
     return (
@@ -37,6 +39,14 @@ export default function WorkTimeline() {
                     <TimelineOppositeContent color="text.secondary">
                         <br/>
                         {item.content}
+                        {item.image &&
+                            <img
+                                src={item.image}
+                                width='100%'
+                                height='auto'
+                                style={{ marginTop: '10px' }}
+                            />
+                        }
                         <br/>
                         <br/>
                         <br/>

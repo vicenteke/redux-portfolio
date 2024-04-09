@@ -74,6 +74,11 @@
         }
     },
     "projects": {
+        "vehicledevaluation": {
+            "name": "Vehicle Devaluation Assessor",
+            "skills": "Next.js, TypeScript, Django REST Framework, Chakra UI",
+            "content": "Proyecto open-source e interfaz que calcula la devaluación de vehículos por el precio corriente y la inflación. Disponible en:"
+        },
         "worldhousingapi": {
             "name": "World Housing API",
             "skills": "Django REST Framework, REST APIs, Next,js, Chakra UI",

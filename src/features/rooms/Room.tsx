@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import useSound from 'use-sound';
 
 import Skeleton from '@mui/material/Skeleton';
 
@@ -12,7 +11,6 @@ import {
 } from './roomsSlice';
 import { incrementSeen, incrementVisited } from './../coins/coinsSlice'
 import { selectSound } from '../sound/soundSlice';
-
 import LoadingPossibleStates from '../../constants/LoadingPossibleStates'
 
 export interface RoomProps {
